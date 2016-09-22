@@ -1,4 +1,4 @@
-<h1>ABM Clientes</h1>
+<h1>ABM Empleados</h1>
 
 <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
   <table>
@@ -6,7 +6,8 @@
       <tr>
         <th>Apellido</th>
         <th>Nombre</th>
-        <th>Telefono</th>
+        <th>Usuario</th>
+        <th>Perfil</th>
         <th>Estado</th>
       </tr>
     </thead>
@@ -14,31 +15,35 @@
       <tr>
         <td class="">Apellido</td>
         <td class="">Nombre</td>
-        <td class="">Telefono</td>
+        <td class="">Usuario</td>
+        <td class="">Perfil</td>
         <td class="">Estado</td>
       </tr>
       <tr>
         <td class="">Apellido</td>
         <td class="">Nombre</td>
-        <td class="">Telefono</td>
+        <td class="">Usuario</td>
+        <td class="">Perfil</td>
         <td class="">Estado</td>
       </tr>
       <tr>
         <td class="">Apellido</td>
         <td class="">Nombre</td>
-        <td class="">Telefono</td>
+        <td class="">Usuario</td>
+        <td class="">Perfil</td>
         <td class="">Estado</td>
       </tr>
       <tr>
         <td class="">Apellido</td>
         <td class="">Nombre</td>
-        <td class="">Telefono</td>
+        <td class="">Usuario</td>
+        <td class="">Perfil</td>
         <td class="">Estado</td>
       </tr>
     </tbody>
     <tfoot>
     <tr>
-      <td colspan="4">
+      <td colspan="5">
         <div class="table-td">
           <button class="">Primera</button>
           <button class="">Ant.</button>
@@ -54,7 +59,7 @@
 
 <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
   <form>
-    <h2>Cliente</h2>
+    <h2>Empleados</h2>
 
     <div>
       <input type="text" class="" placeholder="Apellido">
@@ -62,10 +67,16 @@
     </div>
     <div>
       <input type="text" class="" placeholder="Telefono">
-      <input type="text" class="" placeholder="DNI/CUIT">
+      <input type="text" class="" placeholder="Usuario">
     </div>
     <div>
-      <input type="text" class="" placeholder="Fecha Nacimiento">
+      <input type="text" class="" placeholder="Clave">
+      <input type="text" class="" placeholder="Reingresar Clave">
+    </div>
+    <div>
+      <input type="email" class="" placeholder="Mail">
+    </div>
+    <div>
       <select>
         <option value="1" selected>Perfil 1</option>
         <option value="2" >Perfil 2</option>
@@ -73,18 +84,7 @@
       </select>
     </div>
     <div>
-      <input type="email" class="" placeholder="Mail">
-    </div>
-    <div>
-      <input type="text" class="" placeholder="Direccion">
-    </div>
-    <div>
       <input type="checkbox" name="" value="1">Estado
-      <input type="checkbox" name="" value="2">Newslatter
-      <input type="checkbox" name="" value="3">Cta Cte
-    </div>
-    <div>
-      <textarea placeholder="Comentario"></textarea>
     </div>
     <div>
       <button class="btn btn-primary">Guardar</button>

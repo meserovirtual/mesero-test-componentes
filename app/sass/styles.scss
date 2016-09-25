@@ -6,6 +6,17 @@ $color2: #77b300;
 $color3: #446600;
 
 @import "compass";
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+
+body {
+  /* Rectangle: */
+  background-image: linear-gradient(-180deg, #EEEEEE 0%, #D8D8D8 100%);
+  padding: 50px;
+
+}
+
+
 
 //CONTROLES
 .btn{
@@ -43,7 +54,8 @@ $color3: #446600;
   overflow: hidden;
   -webkit-transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
   transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
-}
+  }
+
 
 .btn-primary{
   background-color: rgb(16,108,200);
@@ -75,4 +87,360 @@ form{
   background-color: #eee;
   width: 90%;
   min-height: 200px;
+}
+
+
+//////////////CHECKBOX
+
+.lbl{
+position: relative;
+display:block;
+height:10px;
+width:35px;
+margin: 10px;
+background:#898989;
+border-radius:100px;
+cursor:pointer;
+transition:all .3s ease;
+  &:after{
+    position:absolute;
+    left:-2px;
+    top:-3px;
+    display:block;
+    width:26px;
+    height:26px;
+    border-radius:100px;
+    background:white;
+    box-shadow:0px 3px 3px rgba(#000,.05);
+    content:'';
+    transition:all .3s ease;
+                 &:active,
+                 &:after{
+                 transform:scale(1.15, .85);
+                 }
+  }
+}
+
+.cbx:checked ~ label{
+background:forestgreen;
+&:after{
+left:20px;
+       background:#00CE5D;
+       .cbx:disabled ~ label{
+       background:#D5D5D5;
+       pointer-events:none;
+       &:after{
+       background:#BCBDBC;
+       }
+       }
+}
+}
+
+.cntr{
+  position:absolute;
+       top:50%;
+       left:50%;
+       transform:translate(-50%,-50%);
+}
+.press{
+      margin-bottom:40px;
+}
+
+.hidden{
+ display:none;
+}
+
+//////////////////////Radio buttons
+
+$duration: 200ms;
+$easing: ease-out;
+$red: #FF373D;
+$green: #00CE5D;
+
+@import "https://fonts.googleapis.com/css?family=Roboto:300";
+
+
+
+label {
+  display:inline-block;
+  position:relative;
+  width:30px;
+  height:30px;
+  margin: 10px;
+  padding: 5px;
+  border-radius:50%;
+  background:$red;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+  transition:all $duration $easing;
+  cursor:pointer;
+}
+
+.inner {
+  @extend .align-middle;
+  width:100%;
+  height:100%;
+  display:block;
+  border-radius:50%;
+  transform:scale(0.6);
+  transition:all $duration $easing 100ms;
+}
+
+.icon {
+  display:block;
+  width:20px;
+  height:3px;
+  @extend .align-middle;
+}
+
+.icon:before {
+  content:'';
+  position:absolute;
+  top:0;
+  display:block;
+  width:20px;
+  height:3px;
+  background:#fff;
+  transform:rotate(45deg);
+  border-radius:3px;
+  transition:all $duration $easing;
+}
+
+.icon:after {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  display:block;
+  width:20px;
+  height:3px;
+  background:#fff;
+  transform:rotate(-45deg);
+  border-radius:3px;
+  transition:all $duration $easing;
+}
+
+// effect one
+
+input.effect-one:checked + label .icon:after {
+  right:-5px;
+}
+
+input.effect-one:checked + label .icon:before {
+  width:11px;
+  top:4px;
+}
+
+// effect two
+
+input.effect-two:checked + label .icon:after {
+  width:11px;
+  top:4px;
+  right:9px;
+  transform: rotate(45deg);
+}
+
+input.effect-two:checked + label .icon:before {
+  transform: rotate(-45deg);
+  right:-5px;
+}
+
+// "ripple"
+
+input:checked + label .inner {
+  background:$green;
+  transform:scale(1);
+}
+
+
+
+
+
+h1 {
+  margin-bottom:20px;
+  color:#293333;
+  font-family: "Roboto", 'sans-serif';
+  font-weight: bolder;
+  font-size:24px;
+  margin-top: 30px;
+}
+
+small {
+  display:block;
+  font-size:60%;
+  margin-top:5px;
+  color: lighten(#333,35%);
+}
+
+.spacer {
+  margin:0 10px;
+}
+
+.align-middle {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  margin:auto;
+}
+
+
+
+
+
+
+
+////////////////////Select
+
+
+/* ==========  Select Field Variables ========== */
+$color-black: "0,0,0";
+$select-background-color: transparent;
+$select-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+$select-font-size: 16px;
+$select-padding: 4px;
+
+/* ==========  Select Field ========== */
+
+/* Style Select Field */
+select {
+  font-family: "Roboto", 'sans-serif';
+  font-weight: bold;
+  background-color: transparent;
+  width: 210px;
+  padding: $select-padding 0;
+  font-size: $select-font-size;
+  color: black;
+  border: none;
+  border-bottom: 1px solid $select-border-color;
+}
+
+/* Remove focus */
+select:focus {
+  outline: none}
+
+/* Hide label */
+.mdl-selectfield label {display: none;}
+/* Use custom arrow */
+.mdl-selectfield select {appearance: none}
+.mdl-selectfield {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 0.75em;
+    right: 0.5em;
+    /* Styling the down arrow */
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: .25em solid transparent;
+    border-right: .25em solid transparent;
+    border-top: .375em solid $select-border-color;
+    pointer-events: none;
+  }
+}
+
+
+
+//////////////////////////////////////////////
+
+
+a{
+  color: black;
+}
+
+.botones, textarea {
+  color: black;
+  font-family: "Roboto", 'sans-serif';
+  /* Rectangle 2 Copy 5: */
+  background: #D8D8D8;
+  border: 1px solid #979797;
+  box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+  border-radius: 8px;
+  width: 210px;
+  height: 35px;
+  padding-left: 10px;
+  font-weight: bolder;
+
+  }
+
+textarea{
+  width: 100%;
+  margin-top: 10px;
+  min-height: 400px;
+  padding-top: 10px;
+}
+
+::-webkit-input-placeholder {
+  /* Usuario: */
+  font-family: "Roboto", 'sans-serif';
+  font-size: 15px;
+  color: black;
+}
+
+
+form{
+  h3{
+    padding: 0px;
+  color: white;
+    font-weight: lighter;
+  }
+  padding: 10px;
+  /* Rectangle 3 Copy 29: */
+  background: #293333;
+  border-radius: 5px;
+}
+
+
+table{
+min-width: 650px;
+  text-align: center;
+ th{
+   padding: 10px;
+   background-color: #293333;
+   color: white;
+   font-weight: bold;
+   max-width: 160px;
+ }
+
+ td{
+   padding: 10px;
+   background-color: #79996D;
+   color: white;
+   max-width: 160px;
+
+ }
+
+
+}
+
+.table-td{
+  /* Rectangle 3 Copy 28: */
+  background: #536363;
+  padding: 0px;
+}
+
+
+.paginacion-primera, .paginacion-sig, .paginacion-ultima, .paginacion-ant{
+  width: 26px;
+  height: 24px;
+  border-style: none;
+  background: url("../images/paginacion-primera.svg") no-repeat scroll 0 0 transparent;
+}
+
+.paginacion-sig{
+  background: url("../images/paginacion-sig.svg") no-repeat scroll 0 0 transparent;
+
+}
+
+.paginacion-ultima{
+  background: url("../images/paginacion-ultima.svg") no-repeat scroll 0 0 transparent;
+
+}
+
+.paginacion-ant{
+  background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
+
 }

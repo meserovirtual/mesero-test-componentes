@@ -57,12 +57,12 @@
     <h2>Cliente</h2>
 
     <div>
-      <input type="text" class="" placeholder="Apellido">
-      <input type="text" class="" placeholder="Nombre">
+      <input type="text" class="texto" placeholder="Apellido">
+      <input type="text" class="texto" placeholder="Nombre">
     </div>
     <div>
-      <input type="text" class="" placeholder="Telefono">
-      <input type="text" class="" placeholder="DNI/CUIT">
+      <input type="text" class="texto" placeholder="Telefono">
+      <input type="text" class="texto" placeholder="DNI/CUIT">
     </div>
     <div>
       <input type="text" class="" placeholder="Fecha Nacimiento">
@@ -73,15 +73,24 @@
       </select>
     </div>
     <div>
-      <input type="email" class="" placeholder="Mail">
+      <input type="email" class="texto" placeholder="Mail">
     </div>
     <div>
-      <input type="text" class="" placeholder="Direccion">
+      <input type="text" class="texto" placeholder="Direccion">
     </div>
-    <div>
-      <input type="checkbox" name="" value="1">Estado
-      <input type="checkbox" name="" value="2">Newslatter
-      <input type="checkbox" name="" value="3">Cta Cte
+    <div style="display: flex">
+      <div class="row press">
+        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Estado
+      </div>
+      <div class="row press">
+        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Cta. Cte
+      </div>
+      <div class="row press">
+        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Newslatter
+      </div>
     </div>
     <div>
       <textarea placeholder="Comentario"></textarea>

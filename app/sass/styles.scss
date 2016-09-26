@@ -85,8 +85,9 @@ body {
 
 form{
   background-color: #eee;
-  width: 90%;
+  width: 451px;
   min-height: 200px;
+  color: white;
 }
 
 
@@ -286,7 +287,12 @@ small {
 
 
 
-
+h2{
+  /* Rectangle 3 Copy 31: */
+  background: #79996D;
+  border-radius: 5px;
+  padding: 10px;
+}
 
 
 
@@ -306,13 +312,17 @@ $select-padding: 4px;
 select {
   font-family: "Roboto", 'sans-serif';
   font-weight: bold;
-  background-color: transparent;
-  width: 210px;
+  width: 222px;
   padding: $select-padding 0;
   font-size: $select-font-size;
   color: black;
-  border: none;
-  border-bottom: 1px solid $select-border-color;
+  margin-bottom: 10px;
+  height: 39px;
+  /* Rectangle 2 Copy 3: */
+  background: #D8D8D8;
+  border: 1px solid #979797;
+  box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+  border-radius: 8px;
 }
 
 /* Remove focus */
@@ -382,6 +392,8 @@ textarea{
 
 
 form{
+  margin-top: 10px;
+  margin-bottom: 10px;
   h3{
     padding: 0px;
   color: white;

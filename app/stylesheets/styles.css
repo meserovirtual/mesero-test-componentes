@@ -78,11 +78,12 @@ body {
 /* line 86, ../sass/styles.scss */
 form {
   background-color: #eee;
-  width: 90%;
+  width: 451px;
   min-height: 200px;
+  color: white;
 }
 
-/* line 95, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 .lbl {
   position: relative;
   display: block;
@@ -94,7 +95,7 @@ form {
   cursor: pointer;
   transition: all .3s ease;
 }
-/* line 105, ../sass/styles.scss */
+/* line 106, ../sass/styles.scss */
 .lbl:after {
   position: absolute;
   left: -2px;
@@ -108,31 +109,31 @@ form {
   content: '';
   transition: all .3s ease;
 }
-/* line 117, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .lbl:after:active, .lbl:after:after {
   transform: scale(1.15, 0.85);
 }
 
-/* line 124, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .cbx:checked ~ label {
   background: forestgreen;
 }
-/* line 126, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 .cbx:checked ~ label:after {
   left: 20px;
   background: #00CE5D;
 }
-/* line 129, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 .cbx:checked ~ label:after .cbx:disabled ~ label {
   background: #D5D5D5;
   pointer-events: none;
 }
-/* line 132, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 .cbx:checked ~ label:after .cbx:disabled ~ label:after {
   background: #BCBDBC;
 }
 
-/* line 139, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 .cntr {
   position: absolute;
   top: 50%;
@@ -140,17 +141,17 @@ form {
   transform: translate(-50%, -50%);
 }
 
-/* line 145, ../sass/styles.scss */
+/* line 146, ../sass/styles.scss */
 .press {
   margin-bottom: 40px;
 }
 
-/* line 149, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 .hidden {
   display: none;
 }
 
-/* line 164, ../sass/styles.scss */
+/* line 165, ../sass/styles.scss */
 label {
   display: inline-block;
   position: relative;
@@ -165,7 +166,7 @@ label {
   cursor: pointer;
 }
 
-/* line 178, ../sass/styles.scss */
+/* line 179, ../sass/styles.scss */
 .inner {
   width: 100%;
   height: 100%;
@@ -175,14 +176,14 @@ label {
   transition: all 200ms ease-out 100ms;
 }
 
-/* line 188, ../sass/styles.scss */
+/* line 189, ../sass/styles.scss */
 .icon {
   display: block;
   width: 20px;
   height: 3px;
 }
 
-/* line 195, ../sass/styles.scss */
+/* line 196, ../sass/styles.scss */
 .icon:before {
   content: '';
   position: absolute;
@@ -196,7 +197,7 @@ label {
   transition: all 200ms ease-out;
 }
 
-/* line 208, ../sass/styles.scss */
+/* line 209, ../sass/styles.scss */
 .icon:after {
   content: '';
   position: absolute;
@@ -211,18 +212,18 @@ label {
   transition: all 200ms ease-out;
 }
 
-/* line 224, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 input.effect-one:checked + label .icon:after {
   right: -5px;
 }
 
-/* line 228, ../sass/styles.scss */
+/* line 229, ../sass/styles.scss */
 input.effect-one:checked + label .icon:before {
   width: 11px;
   top: 4px;
 }
 
-/* line 235, ../sass/styles.scss */
+/* line 236, ../sass/styles.scss */
 input.effect-two:checked + label .icon:after {
   width: 11px;
   top: 4px;
@@ -230,19 +231,19 @@ input.effect-two:checked + label .icon:after {
   transform: rotate(45deg);
 }
 
-/* line 242, ../sass/styles.scss */
+/* line 243, ../sass/styles.scss */
 input.effect-two:checked + label .icon:before {
   transform: rotate(-45deg);
   right: -5px;
 }
 
-/* line 249, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 input:checked + label .inner {
   background: #00CE5D;
   transform: scale(1);
 }
 
-/* line 258, ../sass/styles.scss */
+/* line 259, ../sass/styles.scss */
 h1 {
   margin-bottom: 20px;
   color: #293333;
@@ -252,7 +253,7 @@ h1 {
   margin-top: 30px;
 }
 
-/* line 267, ../sass/styles.scss */
+/* line 268, ../sass/styles.scss */
 small {
   display: block;
   font-size: 60%;
@@ -260,12 +261,12 @@ small {
   color: #8c8c8c;
 }
 
-/* line 274, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 .spacer {
   margin: 0 10px;
 }
 
-/* line 278, ../sass/styles.scss */
+/* line 279, ../sass/styles.scss */
 .align-middle, .inner, .icon {
   position: absolute;
   top: 0;
@@ -275,46 +276,58 @@ small {
   margin: auto;
 }
 
+/* line 290, ../sass/styles.scss */
+h2 {
+  /* Rectangle 3 Copy 31: */
+  background: #79996D;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 /* ==========  Select Field Variables ========== */
 /* ==========  Select Field ========== */
 /* Style Select Field */
-/* line 306, ../sass/styles.scss */
+/* line 312, ../sass/styles.scss */
 select {
   font-family: "Roboto", 'sans-serif';
   font-weight: bold;
-  background-color: transparent;
-  width: 210px;
+  width: 222px;
   padding: 4px 0;
   font-size: 16px;
   color: black;
-  border: none;
-  border-bottom: 1px solid rgba(0,0,0, 0.12);
+  margin-bottom: 10px;
+  height: 39px;
+  /* Rectangle 2 Copy 3: */
+  background: #D8D8D8;
+  border: 1px solid #979797;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
 /* Remove focus */
-/* line 319, ../sass/styles.scss */
+/* line 329, ../sass/styles.scss */
 select:focus {
   outline: none;
 }
 
 /* Hide label */
-/* line 323, ../sass/styles.scss */
+/* line 333, ../sass/styles.scss */
 .mdl-selectfield label {
   display: none;
 }
 
 /* Use custom arrow */
-/* line 325, ../sass/styles.scss */
+/* line 335, ../sass/styles.scss */
 .mdl-selectfield select {
   appearance: none;
 }
 
-/* line 326, ../sass/styles.scss */
+/* line 336, ../sass/styles.scss */
 .mdl-selectfield {
   font-family: 'Roboto','Helvetica','Arial',sans-serif;
   position: relative;
 }
-/* line 329, ../sass/styles.scss */
+/* line 339, ../sass/styles.scss */
 .mdl-selectfield:after {
   position: absolute;
   top: 0.75em;
@@ -330,12 +343,12 @@ select:focus {
   pointer-events: none;
 }
 
-/* line 350, ../sass/styles.scss */
+/* line 360, ../sass/styles.scss */
 a {
   color: black;
 }
 
-/* line 354, ../sass/styles.scss */
+/* line 364, ../sass/styles.scss */
 .botones, input, textarea {
   color: black;
   font-family: "Roboto", 'sans-serif';
@@ -351,7 +364,7 @@ a {
   margin-bottom: 10px;
 }
 
-/* line 369, ../sass/styles.scss */
+/* line 379, ../sass/styles.scss */
 textarea {
   width: 98%;
   margin-top: 10px;
@@ -359,7 +372,7 @@ textarea {
   padding-top: 10px;
 }
 
-/* line 376, ../sass/styles.scss */
+/* line 386, ../sass/styles.scss */
 ::-webkit-input-placeholder {
   /* Usuario: */
   font-family: "Roboto", 'sans-serif';
@@ -367,26 +380,28 @@ textarea {
   color: black;
 }
 
-/* line 384, ../sass/styles.scss */
+/* line 394, ../sass/styles.scss */
 form {
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px;
   /* Rectangle 3 Copy 29: */
   background: #293333;
   border-radius: 5px;
 }
-/* line 385, ../sass/styles.scss */
+/* line 397, ../sass/styles.scss */
 form h3 {
   padding: 0px;
   color: white;
   font-weight: lighter;
 }
 
-/* line 397, ../sass/styles.scss */
+/* line 409, ../sass/styles.scss */
 table {
   min-width: 650px;
   text-align: center;
 }
-/* line 400, ../sass/styles.scss */
+/* line 412, ../sass/styles.scss */
 table th {
   padding: 10px;
   background-color: #293333;
@@ -394,7 +409,7 @@ table th {
   font-weight: bold;
   max-width: 160px;
 }
-/* line 408, ../sass/styles.scss */
+/* line 420, ../sass/styles.scss */
 table td {
   padding: 10px;
   background-color: #79996D;
@@ -402,14 +417,14 @@ table td {
   max-width: 160px;
 }
 
-/* line 419, ../sass/styles.scss */
+/* line 431, ../sass/styles.scss */
 .table-td {
   /* Rectangle 3 Copy 28: */
   background: #536363;
   padding: 0px;
 }
 
-/* line 426, ../sass/styles.scss */
+/* line 438, ../sass/styles.scss */
 .paginacion-primera, .paginacion-sig, .paginacion-ultima, .paginacion-ant {
   width: 26px;
   height: 24px;
@@ -417,17 +432,17 @@ table td {
   background: url("../images/paginacion-primera.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 433, ../sass/styles.scss */
+/* line 445, ../sass/styles.scss */
 .paginacion-sig {
   background: url("../images/paginacion-sig.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 438, ../sass/styles.scss */
+/* line 450, ../sass/styles.scss */
 .paginacion-ultima {
   background: url("../images/paginacion-ultima.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 443, ../sass/styles.scss */
+/* line 455, ../sass/styles.scss */
 .paginacion-ant {
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
 }

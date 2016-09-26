@@ -37,16 +37,16 @@
       </tr>
     </tbody>
     <tfoot>
-      <tr>
-        <td colspan="4">
-          <div class="table-td">
-            <button class="paginacion-primera"></button>
-            <button class="paginacion-ant"></button>
-            <button class="paginacion-sig"></button>
-            <button class="paginacion-ultima"></button>
-          </div>
-        </td>
-      </tr>
+    <tr>
+      <td colspan="4">
+        <div class="table-td">
+          <button class="paginacion-primera"></button>
+          <button class="paginacion-ant"></button>
+          <button class="paginacion-sig"></button>
+          <button class="paginacion-ultima"></button>
+        </div>
+      </td>
+    </tr>
     </tfoot>
   </table>
 </section>
@@ -57,42 +57,55 @@
     <h2>Cliente</h2>
 
     <div>
-      <input type="text" class="" placeholder="Apellido">
-      <input type="text" class="" placeholder="Nombre">
+      <input type="text" class="texto" placeholder="Apellido">
+      <input type="text" class="texto" placeholder="Nombre">
     </div>
     <div>
-      <input type="text" class="" placeholder="Telefono">
-      <input type="text" class="" placeholder="DNI/CUIT">
+      <input type="text" class="texto" placeholder="Telefono">
+      <input type="text" class="texto" placeholder="DNI/CUIT">
     </div>
     <div>
-      <input type="text" class="" placeholder="Fecha Nacimiento">
+      <input type="text" class="texto" placeholder="Fecha Nacimiento">
       <div class="mdl-selectfield">
         <label>Selecciona</label>
         <select class="browser-default">
           <option value="" disabled selected>Selecciona</option>
-          <option value="1">Opcion 1</option>
-          <option value="2">Opcion 2</option>
-          <option value="3">Opcion 3</option>
+          <option value="1">Perfil 1</option>
+          <option value="2">Perfil 2</option>
+          <option value="3">Perfil 3</option>
         </select>
       </div>
     </div>
     <div>
-      <input type="email" class="" placeholder="Mail">
+      <input type="email" class="texto" placeholder="Mail">
     </div>
     <div>
-      <input type="text" class="" placeholder="Direccion">
+      <input type="text" class="texto" placeholder="Direccion">
     </div>
-    <div>
-      <input id="check-1" class="effect-one" style="display: none" type="checkbox" checked><label for="check-1"><span class="inner"></span><span class="icon"></span></label>Estado
-      <input id="check-2" class="effect-one" style="display: none" type="checkbox" checked><label for="check-2"><span class="inner"></span><span class="icon"></span></label>Newslatter
-      <input id="check-3" class="effect-one" style="display: none" type="checkbox" checked><label for="check-3"><span class="inner"></span><span class="icon"></span></label>Cta Cte
+
+    <div style="display: flex">
+      <div class="row press">
+      <input type="checkbox" id="unchecked" value="1" class="cbx hidden"/>
+      <label for="unchecked" class="lbl"></label>Estado
     </div>
+
+      <div class="row press">
+        <input type="checkbox" id="unchecked" value="2" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Newsletter
+      </div>
+
+      <div class="row press">
+        <input type="checkbox" id="unchecked" value="3" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Cta Cte
+      </div>
+    </div>
+
     <div>
       <textarea placeholder="Comentario"></textarea>
     </div>
     <div>
-      <button class="btn btn-redondo btn-primary">Guardar</button>
-      <button class="btn btn-redondo btn-warning">Cancelar</button>
+      <button class="btn btn-primary">Guardar</button>
+      <button class="btn btn-warning">Cancelar</button>
     </div>
   </form>
 </section>

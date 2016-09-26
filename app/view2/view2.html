@@ -37,16 +37,16 @@
       </tr>
     </tbody>
     <tfoot>
-    <tr>
-      <td colspan="4">
-        <div class="table-td">
-          <button class="">Primera</button>
-          <button class="">Ant.</button>
-          <button class="">Sig.</button>
-          <button class="">Última</button>
-        </div>
-      </td>
-    </tr>
+      <tr>
+        <td colspan="4">
+          <div class="table-td">
+            <button class="paginacion-primera"></button>
+            <button class="paginacion-ant"></button>
+            <button class="paginacion-sig"></button>
+            <button class="paginacion-ultima"></button>
+          </div>
+        </td>
+      </tr>
     </tfoot>
   </table>
 </section>
@@ -66,11 +66,15 @@
     </div>
     <div>
       <input type="text" class="" placeholder="Fecha Nacimiento">
-      <select>
-        <option value="1" selected>Perfil 1</option>
-        <option value="2" >Perfil 2</option>
-        <option value="3" >Perfil 3</option>
-      </select>
+      <div class="mdl-selectfield">
+        <label>Selecciona</label>
+        <select class="browser-default">
+          <option value="" disabled selected>Selecciona</option>
+          <option value="1">Opcion 1</option>
+          <option value="2">Opcion 2</option>
+          <option value="3">Opcion 3</option>
+        </select>
+      </div>
     </div>
     <div>
       <input type="email" class="" placeholder="Mail">
@@ -79,16 +83,16 @@
       <input type="text" class="" placeholder="Direccion">
     </div>
     <div>
-      <input type="checkbox" name="" value="1">Estado
-      <input type="checkbox" name="" value="2">Newslatter
-      <input type="checkbox" name="" value="3">Cta Cte
+      <input id="check-1" class="effect-one" style="display: none" type="checkbox" checked><label for="check-1"><span class="inner"></span><span class="icon"></span></label>Estado
+      <input id="check-2" class="effect-one" style="display: none" type="checkbox" checked><label for="check-2"><span class="inner"></span><span class="icon"></span></label>Newslatter
+      <input id="check-3" class="effect-one" style="display: none" type="checkbox" checked><label for="check-3"><span class="inner"></span><span class="icon"></span></label>Cta Cte
     </div>
     <div>
       <textarea placeholder="Comentario"></textarea>
     </div>
     <div>
-      <button class="btn btn-primary">Guardar</button>
-      <button class="btn btn-warning">Cancelar</button>
+      <button class="btn btn-redondo btn-primary">Guardar</button>
+      <button class="btn btn-redondo btn-warning">Cancelar</button>
     </div>
   </form>
 </section>

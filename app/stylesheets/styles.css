@@ -47,7 +47,7 @@ body {
 
 /* line 60, ../sass/styles.scss */
 .btn-primary {
-  background-color: #106cc8;
+  background-color: #00CE5D;
 }
 
 /* line 63, ../sass/styles.scss */
@@ -336,7 +336,7 @@ a {
 }
 
 /* line 354, ../sass/styles.scss */
-.botones, textarea {
+.botones, input, textarea {
   color: black;
   font-family: "Roboto", 'sans-serif';
   /* Rectangle 2 Copy 5: */
@@ -348,13 +348,14 @@ a {
   height: 35px;
   padding-left: 10px;
   font-weight: bolder;
+  margin-bottom: 10px;
 }
 
 /* line 369, ../sass/styles.scss */
 textarea {
-  width: 100%;
+  width: 98%;
   margin-top: 10px;
-  min-height: 400px;
+  min-height: 150px;
   padding-top: 10px;
 }
 

@@ -37,16 +37,16 @@
       </tr>
     </tbody>
     <tfoot>
-    <tr>
-      <td colspan="4">
-        <div class="table-td">
-          <button class="">Primera</button>
-          <button class="">Ant.</button>
-          <button class="">Sig.</button>
-          <button class="">Última</button>
-        </div>
-      </td>
-    </tr>
+      <tr>
+        <td colspan="4">
+          <div class="table-td">
+            <button class="paginacion-primera"></button>
+            <button class="paginacion-ant"></button>
+            <button class="paginacion-sig"></button>
+            <button class="paginacion-ultima"></button>
+          </div>
+        </td>
+      </tr>
     </tfoot>
   </table>
 </section>
@@ -69,11 +69,14 @@
       <input type="text" class="" placeholder="Web">
     </div>
     <div>
-      <input type="checkbox" name="" value="1">Estado
+      <div class="row press">
+        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Estado
+      </div>
     </div>
     <div>
-      <button class="btn btn-primary">Guardar</button>
-      <button class="btn btn-warning">Cancelar</button>
+      <button class="btn btn-redondo btn-primary">Guardar</button>
+      <button class="btn btn-redondo btn-warning">Cancelar</button>
     </div>
   </form>
 </section>

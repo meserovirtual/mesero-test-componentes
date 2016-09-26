@@ -1,5 +1,5 @@
 //botones
-$color1: #334d00;
+$clr_control_primary: #00CE5D;
 
 //degradado_principal
 $color2: #77b300;
@@ -58,7 +58,7 @@ body {
 
 
 .btn-primary{
-  background-color: rgb(16,108,200);
+  background-color: $clr_control_primary;
 }
 .btn-warning{
   background-color: rgb(244,81,30);
@@ -351,7 +351,7 @@ a{
   color: black;
 }
 
-.botones, textarea {
+.botones, input, textarea {
   color: black;
   font-family: "Roboto", 'sans-serif';
   /* Rectangle 2 Copy 5: */
@@ -363,13 +363,13 @@ a{
   height: 35px;
   padding-left: 10px;
   font-weight: bolder;
-
+  margin-bottom: 10px;
   }
 
 textarea{
-  width: 100%;
+  width: 98%;
   margin-top: 10px;
-  min-height: 400px;
+  min-height: 150px;
   padding-top: 10px;
 }
 

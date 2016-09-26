@@ -42,16 +42,16 @@
       </tr>
     </tbody>
     <tfoot>
-    <tr>
-      <td colspan="5">
-        <div class="table-td">
-          <button class="">Primera</button>
-          <button class="">Ant.</button>
-          <button class="">Sig.</button>
-          <button class="">Última</button>
-        </div>
-      </td>
-    </tr>
+      <tr>
+        <td colspan="5">
+          <div class="table-td">
+            <button class="paginacion-primera"></button>
+            <button class="paginacion-ant"></button>
+            <button class="paginacion-sig"></button>
+            <button class="paginacion-ultima"></button>
+          </div>
+        </td>
+      </tr>
     </tfoot>
   </table>
 </section>
@@ -77,18 +77,25 @@
       <input type="email" class="" placeholder="Mail">
     </div>
     <div>
-      <select>
-        <option value="1" selected>Perfil 1</option>
-        <option value="2" >Perfil 2</option>
-        <option value="3" >Perfil 3</option>
-      </select>
+      <div class="mdl-selectfield">
+        <label>Selecciona</label>
+        <select class="browser-default">
+          <option value="" disabled selected>Selecciona</option>
+          <option value="1">Opcion 1</option>
+          <option value="2">Opcion 2</option>
+          <option value="3">Opcion 3</option>
+        </select>
+      </div>
     </div>
     <div>
-      <input type="checkbox" name="" value="1">Estado
+      <div class="row press">
+        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>Estado
+      </div>
     </div>
     <div>
-      <button class="btn btn-primary">Guardar</button>
-      <button class="btn btn-warning">Cancelar</button>
+      <button class="btn btn-redondo btn-primary">Guardar</button>
+      <button class="btn btn-redondo btn-warning">Cancelar</button>
     </div>
   </form>
 </section>

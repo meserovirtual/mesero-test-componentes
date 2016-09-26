@@ -1,14 +1,17 @@
-'use strict';
+(function () {
+  'use strict';
+  var scripts = document.getElementsByTagName("script");
+  var currentScriptPath = scripts[scripts.length - 1].src;
 
-angular.module('myApp.view4', ['ngRoute'])
+  angular.module('myApp.view4', ['ngRoute'])
+      .controller('View4Ctrl', View4Ctrl);
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view4', {
-    templateUrl: 'view4/view4.html',
-    controller: 'View4Ctrl'
-  });
-}])
 
-.controller('View4Ctrl', [function() {
+  View4Ctrl.$inject = ['$scope'];
+  function View4Ctrl($scope) {
 
-}]);
+    var vm = this;
+
+  }
+
+})();

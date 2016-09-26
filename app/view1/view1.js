@@ -1,14 +1,17 @@
-'use strict';
+(function () {
+  'use strict';
+  var scripts = document.getElementsByTagName("script");
+  var currentScriptPath = scripts[scripts.length - 1].src;
 
-angular.module('myApp.view1', ['ngRoute'])
+  angular.module('myApp.view1', ['ngRoute'])
+      .controller('View1Ctrl', View1Ctrl);
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
 
-.controller('View1Ctrl', [function() {
+  View1Ctrl.$inject = ['$scope'];
+  function View1Ctrl($scope) {
 
-}]);
+    var vm = this;
+
+  }
+
+})();

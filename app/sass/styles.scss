@@ -456,3 +456,10 @@ min-width: 650px;
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
 
 }
+
+
+button > img{
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}

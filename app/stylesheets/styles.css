@@ -446,3 +446,10 @@ table td {
 .paginacion-ant {
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
 }
+
+/* line 461, ../sass/styles.scss */
+button > img {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}

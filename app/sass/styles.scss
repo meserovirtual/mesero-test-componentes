@@ -491,6 +491,7 @@ table td:hover{
 
 }
 
+<<<<<<< HEAD
 h3{
   font-family: "Roboto", 'sans-serif';
 }
@@ -576,4 +577,11 @@ $divider: sqrt($cells);
       }
     }
   }
+=======
+
+button > img{
+  position: absolute;
+  left: 25%;
+  top: 25%;
+>>>>>>> origin/master
 }

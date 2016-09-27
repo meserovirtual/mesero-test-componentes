@@ -3,11 +3,12 @@
 /* line 12, ../sass/styles.scss */
 body {
   /* Rectangle: */
+  font-family: "Roboto", 'sans-serif';
   background-image: linear-gradient(-180deg, #eeeeee 0%, #d8d8d8 100%);
-  padding: 50px;
+  padding: 50px !important;
 }
 
-/* line 22, ../sass/styles.scss */
+/* line 23, ../sass/styles.scss */
 .btn {
   display: inline-block;
   position: relative;
@@ -45,17 +46,17 @@ body {
   transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .btn-primary {
   background-color: #00CE5D;
 }
 
-/* line 63, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 .btn-warning {
   background-color: #f4511e;
 }
 
-/* line 67, ../sass/styles.scss */
+/* line 68, ../sass/styles.scss */
 .btn-redondo {
   z-index: 20;
   line-height: 56px;
@@ -75,7 +76,7 @@ body {
   transition-property: background-color,box-shadow,transform,-webkit-transform;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 form {
   background-color: #eee;
   width: 451px;
@@ -83,8 +84,9 @@ form {
   color: white;
 }
 
-/* line 96, ../sass/styles.scss */
+/* line 97, ../sass/styles.scss */
 .lbl {
+  font-family: "Roboto", 'sans-serif';
   position: relative;
   display: block;
   height: 10px;
@@ -95,7 +97,7 @@ form {
   cursor: pointer;
   transition: all .3s ease;
 }
-/* line 106, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 .lbl:after {
   position: absolute;
   left: -2px;
@@ -109,31 +111,31 @@ form {
   content: '';
   transition: all .3s ease;
 }
-/* line 118, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 .lbl:after:active, .lbl:after:after {
   transform: scale(1.15, 0.85);
 }
 
-/* line 125, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 .cbx:checked ~ label {
   background: forestgreen;
 }
-/* line 127, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 .cbx:checked ~ label:after {
   left: 20px;
   background: #00CE5D;
 }
-/* line 130, ../sass/styles.scss */
+/* line 132, ../sass/styles.scss */
 .cbx:checked ~ label:after .cbx:disabled ~ label {
   background: #D5D5D5;
   pointer-events: none;
 }
-/* line 133, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .cbx:checked ~ label:after .cbx:disabled ~ label:after {
   background: #BCBDBC;
 }
 
-/* line 140, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 .cntr {
   position: absolute;
   top: 50%;
@@ -141,17 +143,17 @@ form {
   transform: translate(-50%, -50%);
 }
 
-/* line 146, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 .press {
   margin-bottom: 40px;
 }
 
-/* line 150, ../sass/styles.scss */
+/* line 152, ../sass/styles.scss */
 .hidden {
   display: none;
 }
 
-/* line 165, ../sass/styles.scss */
+/* line 167, ../sass/styles.scss */
 label {
   display: inline-block;
   position: relative;
@@ -166,7 +168,7 @@ label {
   cursor: pointer;
 }
 
-/* line 179, ../sass/styles.scss */
+/* line 181, ../sass/styles.scss */
 .inner {
   width: 100%;
   height: 100%;
@@ -176,14 +178,14 @@ label {
   transition: all 200ms ease-out 100ms;
 }
 
-/* line 189, ../sass/styles.scss */
+/* line 191, ../sass/styles.scss */
 .icon {
   display: block;
   width: 20px;
   height: 3px;
 }
 
-/* line 196, ../sass/styles.scss */
+/* line 198, ../sass/styles.scss */
 .icon:before {
   content: '';
   position: absolute;
@@ -197,7 +199,7 @@ label {
   transition: all 200ms ease-out;
 }
 
-/* line 209, ../sass/styles.scss */
+/* line 211, ../sass/styles.scss */
 .icon:after {
   content: '';
   position: absolute;
@@ -212,18 +214,18 @@ label {
   transition: all 200ms ease-out;
 }
 
-/* line 225, ../sass/styles.scss */
+/* line 227, ../sass/styles.scss */
 input.effect-one:checked + label .icon:after {
   right: -5px;
 }
 
-/* line 229, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 input.effect-one:checked + label .icon:before {
   width: 11px;
   top: 4px;
 }
 
-/* line 236, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 input.effect-two:checked + label .icon:after {
   width: 11px;
   top: 4px;
@@ -231,19 +233,19 @@ input.effect-two:checked + label .icon:after {
   transform: rotate(45deg);
 }
 
-/* line 243, ../sass/styles.scss */
+/* line 245, ../sass/styles.scss */
 input.effect-two:checked + label .icon:before {
   transform: rotate(-45deg);
   right: -5px;
 }
 
-/* line 250, ../sass/styles.scss */
+/* line 252, ../sass/styles.scss */
 input:checked + label .inner {
   background: #00CE5D;
   transform: scale(1);
 }
 
-/* line 259, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 h1 {
   margin-bottom: 20px;
   color: #293333;
@@ -253,7 +255,7 @@ h1 {
   margin-top: 30px;
 }
 
-/* line 268, ../sass/styles.scss */
+/* line 270, ../sass/styles.scss */
 small {
   display: block;
   font-size: 60%;
@@ -261,12 +263,12 @@ small {
   color: #8c8c8c;
 }
 
-/* line 275, ../sass/styles.scss */
+/* line 277, ../sass/styles.scss */
 .spacer {
   margin: 0 10px;
 }
 
-/* line 279, ../sass/styles.scss */
+/* line 281, ../sass/styles.scss */
 .align-middle, .inner, .icon {
   position: absolute;
   top: 0;
@@ -276,8 +278,9 @@ small {
   margin: auto;
 }
 
-/* line 290, ../sass/styles.scss */
+/* line 292, ../sass/styles.scss */
 h2 {
+  font-family: "Roboto", 'sans-serif';
   /* Rectangle 3 Copy 31: */
   background: #79996D;
   border-radius: 5px;
@@ -287,7 +290,7 @@ h2 {
 /* ==========  Select Field Variables ========== */
 /* ==========  Select Field ========== */
 /* Style Select Field */
-/* line 312, ../sass/styles.scss */
+/* line 315, ../sass/styles.scss */
 select {
   font-family: "Roboto", 'sans-serif';
   font-weight: bold;
@@ -305,29 +308,29 @@ select {
 }
 
 /* Remove focus */
-/* line 329, ../sass/styles.scss */
+/* line 332, ../sass/styles.scss */
 select:focus {
   outline: none;
 }
 
 /* Hide label */
-/* line 333, ../sass/styles.scss */
+/* line 336, ../sass/styles.scss */
 .mdl-selectfield label {
   display: none;
 }
 
 /* Use custom arrow */
-/* line 335, ../sass/styles.scss */
+/* line 338, ../sass/styles.scss */
 .mdl-selectfield select {
   appearance: none;
 }
 
-/* line 336, ../sass/styles.scss */
+/* line 339, ../sass/styles.scss */
 .mdl-selectfield {
   font-family: 'Roboto','Helvetica','Arial',sans-serif;
   position: relative;
 }
-/* line 339, ../sass/styles.scss */
+/* line 342, ../sass/styles.scss */
 .mdl-selectfield:after {
   position: absolute;
   top: 0.75em;
@@ -343,14 +346,15 @@ select:focus {
   pointer-events: none;
 }
 
-/* line 360, ../sass/styles.scss */
+/* line 363, ../sass/styles.scss */
 a {
   color: black;
 }
 
-/* line 364, ../sass/styles.scss */
+/* line 367, ../sass/styles.scss */
 .botones, input, textarea {
   color: black;
+  outline: none;
   font-family: "Roboto", 'sans-serif';
   /* Rectangle 2 Copy 5: */
   background: #D8D8D8;
@@ -364,7 +368,7 @@ a {
   margin-bottom: 10px;
 }
 
-/* line 379, ../sass/styles.scss */
+/* line 383, ../sass/styles.scss */
 textarea {
   width: 98%;
   margin-top: 10px;
@@ -372,7 +376,7 @@ textarea {
   padding-top: 10px;
 }
 
-/* line 386, ../sass/styles.scss */
+/* line 390, ../sass/styles.scss */
 ::-webkit-input-placeholder {
   /* Usuario: */
   font-family: "Roboto", 'sans-serif';
@@ -380,8 +384,19 @@ textarea {
   color: black;
 }
 
-/* line 394, ../sass/styles.scss */
+/* line 399, ../sass/styles.scss */
+.botones:focus, input:focus, textarea:focus {
+  background-color: #536363;
+  color: white;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 410, ../sass/styles.scss */
 form {
+  font-family: "Roboto", 'sans-serif';
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
@@ -389,42 +404,59 @@ form {
   background: #293333;
   border-radius: 5px;
 }
-/* line 397, ../sass/styles.scss */
+/* line 414, ../sass/styles.scss */
 form h3 {
+  font-family: "Roboto", 'sans-serif';
   padding: 0px;
   color: white;
   font-weight: lighter;
 }
 
-/* line 409, ../sass/styles.scss */
+/* line 427, ../sass/styles.scss */
 table {
+  border-spacing: 1px;
+  font-family: "Roboto", 'sans-serif';
   min-width: 650px;
   text-align: center;
 }
-/* line 412, ../sass/styles.scss */
+/* line 432, ../sass/styles.scss */
 table th {
-  padding: 10px;
+  border-style: none;
+  font-size: 16px;
+  padding: 5px;
   background-color: #293333;
   color: white;
   font-weight: bold;
   max-width: 160px;
 }
-/* line 420, ../sass/styles.scss */
+/* line 442, ../sass/styles.scss */
 table td {
+  font-size: 14px;
   padding: 10px;
   background-color: #79996D;
   color: white;
+  font-weight: lighter;
   max-width: 160px;
 }
 
-/* line 431, ../sass/styles.scss */
+/* line 456, ../sass/styles.scss */
+table td:hover {
+  background-color: #536363;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 465, ../sass/styles.scss */
 .table-td {
   /* Rectangle 3 Copy 28: */
   background: #536363;
   padding: 0px;
 }
 
-/* line 438, ../sass/styles.scss */
+/* line 472, ../sass/styles.scss */
 .paginacion-primera, .paginacion-sig, .paginacion-ultima, .paginacion-ant {
   width: 26px;
   height: 24px;
@@ -432,17 +464,116 @@ table td {
   background: url("../images/paginacion-primera.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 445, ../sass/styles.scss */
+/* line 479, ../sass/styles.scss */
 .paginacion-sig {
   background: url("../images/paginacion-sig.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 450, ../sass/styles.scss */
+/* line 484, ../sass/styles.scss */
 .paginacion-ultima {
   background: url("../images/paginacion-ultima.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 455, ../sass/styles.scss */
+/* line 489, ../sass/styles.scss */
 .paginacion-ant {
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
+}
+
+/* line 494, ../sass/styles.scss */
+h3 {
+  font-family: "Roboto", 'sans-serif';
+}
+
+/* line 500, ../sass/styles.scss */
+.button {
+  position: relative;
+  height: 56px;
+  width: 56px;
+  flex: 0 0 56px;
+  display: inline-block;
+  padding: 0;
+  margin: 4px;
+  border: 0;
+  border-radius: 100%;
+  overflow: hidden;
+  font-size: 34px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+/* line 514, ../sass/styles.scss */
+.button.secondary {
+  background: red;
+  color: black;
+}
+/* line 517, ../sass/styles.scss */
+.button.secondary .ripple:before {
+  background: black;
+}
+/* line 522, ../sass/styles.scss */
+.button .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  line-height: 56px;
+  pointer-events: white;
+}
+/* line 529, ../sass/styles.scss */
+.button .ripples {
+  flex-flow: row wrap;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
+}
+/* line 538, ../sass/styles.scss */
+.button .ripple {
+  -webkit-appearance: none;
+  position: relative;
+  display: flex;
+  margin: 0;
+  border: 0;
+  background: none;
+  flex: 0 0 12.5%;
+  padding-bottom: 12.5%;
+}
+/* line 548, ../sass/styles.scss */
+.button .ripple:focus {
+  outline: 0;
+}
+/* line 552, ../sass/styles.scss */
+.button .ripple:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -56px;
+  height: 112px;
+  width: 112px;
+  border-radius: 100%;
+  transform: scale(0);
+  opacity: 0.2;
+  pointer-events: none;
+}
+/* line 568, ../sass/styles.scss */
+.button .ripple:focus:before {
+  animation: grow 1s;
+}
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

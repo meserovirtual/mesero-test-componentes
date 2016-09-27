@@ -11,8 +11,9 @@ $color3: #446600;
 
 body {
   /* Rectangle: */
+  font-family: "Roboto", 'sans-serif';
   background-image: linear-gradient(-180deg, #EEEEEE 0%, #D8D8D8 100%);
-  padding: 50px;
+  padding: 50px!important;
 
 }
 
@@ -94,6 +95,7 @@ form{
 //////////////CHECKBOX
 
 .lbl{
+  font-family: "Roboto", 'sans-serif';
 position: relative;
 display:block;
 height:10px;
@@ -288,6 +290,7 @@ small {
 
 
 h2{
+  font-family: "Roboto", 'sans-serif';
   /* Rectangle 3 Copy 31: */
   background: #79996D;
   border-radius: 5px;
@@ -363,6 +366,7 @@ a{
 
 .botones, input, textarea {
   color: black;
+  outline: none;
   font-family: "Roboto", 'sans-serif';
   /* Rectangle 2 Copy 5: */
   background: #D8D8D8;
@@ -391,10 +395,24 @@ textarea{
 }
 
 
+
+.botones:focus, input:focus, textarea:focus{
+  background-color: #536363;
+  color: white;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+
+}
+
+
 form{
+  font-family: "Roboto", 'sans-serif';
   margin-top: 10px;
   margin-bottom: 10px;
   h3{
+    font-family: "Roboto", 'sans-serif';
     padding: 0px;
   color: white;
     font-weight: lighter;
@@ -407,10 +425,14 @@ form{
 
 
 table{
+  border-spacing: 1px;
+  font-family: "Roboto", 'sans-serif';
 min-width: 650px;
   text-align: center;
  th{
-   padding: 10px;
+   border-style: none;
+   font-size: 16px;
+   padding: 5px;
    background-color: #293333;
    color: white;
    font-weight: bold;
@@ -418,14 +440,26 @@ min-width: 650px;
  }
 
  td{
+   font-size: 14px;
    padding: 10px;
    background-color: #79996D;
    color: white;
+   font-weight: lighter;
    max-width: 160px;
 
  }
 
 
+}
+
+
+table td:hover{
+  background-color: #536363;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .table-td{
@@ -455,4 +489,91 @@ min-width: 650px;
 .paginacion-ant{
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
 
+}
+
+h3{
+  font-family: "Roboto", 'sans-serif';
+}
+
+$cells: 64;
+$divider: sqrt($cells);
+.button {
+  position: relative;
+  height: 56px;
+  width: 56px;
+  flex: 0 0 56px;
+  display: inline-block;
+  padding: 0;
+  margin: 4px;
+  border: 0;
+  border-radius: 100%;
+  overflow: hidden;
+  font-size: 34px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+
+  &.secondary {
+    background: red;
+    color: black;
+    .ripple:before {
+      background: black;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    line-height: 56px;
+    pointer-events: white;
+  }
+
+  .ripples {
+    flex-flow: row wrap;
+    display: flex;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: 100%;
+    -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+  }
+
+  .ripple {
+    -webkit-appearance: none;
+    position: relative;
+    display: flex;
+    margin: 0;
+    border: 0;
+    background: none;
+    flex: 0 0 (100%/$divider);
+    padding-bottom: (100%/$divider);
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -56px;
+      height: 56px*2;
+      width: 56px*2;
+      border-radius: 100%;
+      transform: scale(0);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    &:focus {
+      &:before {
+        animation: grow 1s;
+
+        @keyframes grow {
+          0% {transform: scale(0)}
+          70% {transform: scale(1); opacity: 0.2;}
+          100% {transform: scale(2); opacity: 0;}
+        }
+      }
+    }
+  }
 }

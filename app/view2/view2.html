@@ -1,97 +1,98 @@
 <div ng-controller="View2Ctrl as view2Ctrl">
-  <h1>ABM Clientes</h1>
+    <h1>ABM Clientes</h1>
 
-  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <table>
-      <thead>
-      <tr>
-        <th>Apellido</th>
-        <th>Nombre</th>
-        <th>Telefono</th>
-        <th>Estado</th>
-      </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="row in view2Ctrl.usuarios"
-            ng-click="">
-          <td class="">{{row.apellido}}</td>
-          <td class="">{{row.nombre}}</td>
-          <td class="">{{row.telefono}}</td>
-          <td class="">{{row.status}}</td>
-        </tr>
-      </tbody>
-      <tfoot>
-      <tr>
-        <td colspan="4">
-          <div class="table-td">
-            <button class="paginacion-primera"></button>
-            <button class="paginacion-ant"></button>
-            <button class="paginacion-sig"></button>
-            <button class="paginacion-ultima"></button>
-          </div>
-        </td>
-      </tr>
-      </tfoot>
-    </table>
-  </section>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <table>
+            <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Estado</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in view2Ctrl.usuarios"
+                ng-click="">
+                <td class="">{{row.apellido}}</td>
+                <td class="">{{row.nombre}}</td>
+                <td class="">{{row.telefono}}</td>
+                <td class="">{{row.status}}</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4">
+                    <div class="table-td">
+                        <button class="paginacion-primera"></button>
+                        <button class="paginacion-ant"></button>
+                        <button class="paginacion-sig"></button>
+                        <button class="paginacion-ultima"></button>
+                    </div>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
 
 
-  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <form>
-      <h2>Cliente</h2>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <form>
+            <h2>Cliente</h2>
 
-      <div>
-        <input type="text" class="texto" placeholder="Apellido">
-        <input type="text" class="texto" placeholder="Nombre">
-      </div>
-      <div>
-        <input type="text" class="texto" placeholder="Telefono">
-        <input type="text" class="texto" placeholder="DNI/CUIT">
-      </div>
-      <div>
-        <input type="text" class="texto" placeholder="Fecha Nacimiento">
-        <div class="mdl-selectfield">
-          <label>Selecciona</label>
-          <select class="browser-default">
-            <option value="" disabled selected>Selecciona</option>
-            <option value="1">Perfil 1</option>
-            <option value="2">Perfil 2</option>
-            <option value="3">Perfil 3</option>
-          </select>
-        </div>
-      </div>
-      <div>
-        <input type="email" class="texto" placeholder="Mail">
-      </div>
-      <div>
-        <input type="text" class="texto" placeholder="Direccion">
-      </div>
+            <div>
+                <input type="text" class="texto" placeholder="Apellido">
+                <input type="text" class="texto" placeholder="Nombre">
+            </div>
+            <div>
+                <input type="text" class="texto" placeholder="Telefono">
+                <input type="text" class="texto" placeholder="DNI/CUIT">
+            </div>
+            <div>
+                <input type="text" class="texto" placeholder="Fecha Nacimiento">
+                <div class="mdl-selectfield">
+                    <label>Selecciona</label>
+                    <select class="browser-default">
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="1">Perfil 1</option>
+                        <option value="2">Perfil 2</option>
+                        <option value="3">Perfil 3</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <input type="email" class="texto" placeholder="Mail">
+            </div>
+            <div>
+                <input type="text" class="texto" placeholder="Direccion">
+            </div>
 
-      <div style="display: flex">
-        <div class="row press">
-          <input type="checkbox" id="unchecked1" value="1" class="cbx hidden"/>
-          <label for="unchecked1" class="lbl"></label>Estado
-        </div>
+            <div style="display: flex">
+                <div class="row press">
+                    <input type="checkbox" id="unchecked1" value="1" ng-model="view2Ctrl.prueba" class="cbx hidden"/>
+                    <label for="unchecked1" class="lbl"></label>Estado
+                </div>
+                <h2>{{view2Ctrl.prueba}}</h2>
 
-        <div class="row press">
-          <input type="checkbox" id="unchecked2" value="2" class="cbx hidden"/>
-          <label for="unchecked2" class="lbl"></label>Newsletter
-        </div>
+                <div class="row press">
+                    <input type="checkbox" id="unchecked2" value="2" class="cbx hidden"/>
+                    <label for="unchecked2" class="lbl"></label>Newsletter
+                </div>
 
-        <div class="row press">
-          <input type="checkbox" id="unchecked3" value="3" class="cbx hidden"/>
-          <label for="unchecked3" class="lbl"></label>Cta Cte
-        </div>
-      </div>
+                <div class="row press">
+                    <input type="checkbox" id="unchecked3" value="3" class="cbx hidden"/>
+                    <label for="unchecked3" class="lbl"></label>Cta Cte
+                </div>
+            </div>
 
-      <div>
-        <textarea placeholder="Comentario"></textarea>
-      </div>
-      <div>
-        <button class="btn btn-primary">Guardar</button>
-        <button class="btn btn-warning">Cancelar</button>
-      </div>
-    </form>
-  </section>
+            <div>
+                <textarea placeholder="Comentario"></textarea>
+            </div>
+            <div>
+                <button class="btn btn-primary">Guardar</button>
+                <button class="btn btn-warning">Cancelar</button>
+            </div>
+        </form>
+    </section>
 </div>
 

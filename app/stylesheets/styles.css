@@ -1,50 +1,585 @@
-/*
-Error: Invalid CSS after "...> origin/master": expected "{", was "}"
-        on line 587 of /Applications/XAMPP/xamppfiles/htdocs/mesero-test-componentes/app/sass/styles.scss
+@import "https://fonts.googleapis.com/css?family=Roboto";
+@import "https://fonts.googleapis.com/css?family=Roboto:300";
+/* line 12, ../sass/styles.scss */
+body {
+  /* Rectangle: */
+  font-family: "Roboto", 'sans-serif';
+  background-image: linear-gradient(-180deg, #eeeeee 0%, #d8d8d8 100%);
+  padding: 50px !important;
+}
 
-582: button > img{
-583:   position: absolute;
-584:   left: 25%;
-585:   top: 25%;
-586: >>>>>>> origin/master
-587: }
+/* line 23, ../sass/styles.scss */
+.btn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 88px;
+  line-height: 36px;
+  vertical-align: middle;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  padding: 0 6px;
+  margin: 6px 8px;
+  background: transparent;
+  color: currentColor;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-Backtrace:
-/Applications/XAMPP/xamppfiles/htdocs/mesero-test-componentes/app/sass/styles.scss:587
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:637:in `block'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:707:in `declaration_or_ruleset'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:657:in `block_child'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:638:in `block'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:707:in `declaration_or_ruleset'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:657:in `block_child'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:638:in `block'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:631:in `ruleset'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
-/Users/diegob/.rvm/gems/ruby-head/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/Users/diegob/.rvm/gems/ruby-head/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Users/diegob/.rvm/gems/ruby-head/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Users/diegob/.rvm/gems/ruby-head/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...> origin/master\": expected \"{\", was \"}\"\A         on line 587 of /Applications/XAMPP/xamppfiles/htdocs/mesero-test-componentes/app/sass/styles.scss\A \A 582: button > img{\A 583:   position: absolute;\A 584:   left: 25%;\A 585:   top: 25%;\A 586: >>>>>>> origin/master\A 587: }"; }
+/* line 61, ../sass/styles.scss */
+.btn-primary {
+  background-color: #00CE5D;
+}
+
+/* line 64, ../sass/styles.scss */
+.btn-warning {
+  background-color: #f4511e;
+}
+
+/* line 68, ../sass/styles.scss */
+.btn-redondo {
+  z-index: 20;
+  line-height: 56px;
+  min-width: 0;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 50%;
+  background-clip: padding-box;
+  overflow: hidden;
+  -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  -webkit-transition-property: background-color,box-shadow,-webkit-transform;
+  transition-property: background-color,box-shadow,-webkit-transform;
+  transition-property: background-color,box-shadow,transform;
+  transition-property: background-color,box-shadow,transform,-webkit-transform;
+}
+
+/* line 87, ../sass/styles.scss */
+form {
+  background-color: #eee;
+  width: 451px;
+  min-height: 200px;
+  color: white;
+}
+
+/* line 97, ../sass/styles.scss */
+.lbl {
+  font-family: "Roboto", 'sans-serif';
+  position: relative;
+  display: block;
+  height: 10px;
+  width: 35px;
+  margin: 10px;
+  background: #898989;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+/* line 108, ../sass/styles.scss */
+.lbl:after {
+  position: absolute;
+  left: -2px;
+  top: -3px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+  content: '';
+  transition: all .3s ease;
+}
+/* line 120, ../sass/styles.scss */
+.lbl:after:active, .lbl:after:after {
+  transform: scale(1.15, 0.85);
+}
+
+/* line 127, ../sass/styles.scss */
+.cbx:checked ~ label {
+  background: forestgreen;
+}
+/* line 129, ../sass/styles.scss */
+.cbx:checked ~ label:after {
+  left: 20px;
+  background: #00CE5D;
+}
+/* line 132, ../sass/styles.scss */
+.cbx:checked ~ label:after .cbx:disabled ~ label {
+  background: #D5D5D5;
+  pointer-events: none;
+}
+/* line 135, ../sass/styles.scss */
+.cbx:checked ~ label:after .cbx:disabled ~ label:after {
+  background: #BCBDBC;
+}
+
+/* line 142, ../sass/styles.scss */
+.cntr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 148, ../sass/styles.scss */
+.press {
+  margin-bottom: 40px;
+}
+
+/* line 152, ../sass/styles.scss */
+.hidden {
+  display: none;
+}
+
+/* line 167, ../sass/styles.scss */
+label {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  background: #FF373D;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-out;
+  cursor: pointer;
+}
+
+/* line 181, ../sass/styles.scss */
+.inner {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  transform: scale(0.6);
+  transition: all 200ms ease-out 100ms;
+}
+
+/* line 191, ../sass/styles.scss */
+.icon {
+  display: block;
+  width: 20px;
+  height: 3px;
+}
+
+/* line 198, ../sass/styles.scss */
+.icon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  transition: all 200ms ease-out;
+}
+
+/* line 211, ../sass/styles.scss */
+.icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  transform: rotate(-45deg);
+  border-radius: 3px;
+  transition: all 200ms ease-out;
+}
+
+/* line 227, ../sass/styles.scss */
+input.effect-one:checked + label .icon:after {
+  right: -5px;
+}
+
+/* line 231, ../sass/styles.scss */
+input.effect-one:checked + label .icon:before {
+  width: 11px;
+  top: 4px;
+}
+
+/* line 238, ../sass/styles.scss */
+input.effect-two:checked + label .icon:after {
+  width: 11px;
+  top: 4px;
+  right: 9px;
+  transform: rotate(45deg);
+}
+
+/* line 245, ../sass/styles.scss */
+input.effect-two:checked + label .icon:before {
+  transform: rotate(-45deg);
+  right: -5px;
+}
+
+/* line 252, ../sass/styles.scss */
+input:checked + label .inner {
+  background: #00CE5D;
+  transform: scale(1);
+}
+
+/* line 261, ../sass/styles.scss */
+h1 {
+  margin-bottom: 20px;
+  color: #293333;
+  font-family: "Roboto", 'sans-serif';
+  font-weight: bolder;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+/* line 270, ../sass/styles.scss */
+small {
+  display: block;
+  font-size: 60%;
+  margin-top: 5px;
+  color: #8c8c8c;
+}
+
+/* line 277, ../sass/styles.scss */
+.spacer {
+  margin: 0 10px;
+}
+
+/* line 281, ../sass/styles.scss */
+.align-middle, .inner, .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 292, ../sass/styles.scss */
+h2 {
+  font-family: "Roboto", 'sans-serif';
+  /* Rectangle 3 Copy 31: */
+  background: #79996D;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* ==========  Select Field Variables ========== */
+/* ==========  Select Field ========== */
+/* Style Select Field */
+/* line 315, ../sass/styles.scss */
+select {
+  font-family: "Roboto", 'sans-serif';
+  font-weight: bold;
+  width: 222px;
+  padding: 4px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+  height: 39px;
+  /* Rectangle 2 Copy 3: */
+  background: #D8D8D8;
+  border: 1px solid #979797;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+/* Remove focus */
+/* line 332, ../sass/styles.scss */
+select:focus {
+  outline: none;
+}
+
+/* Hide label */
+/* line 336, ../sass/styles.scss */
+.mdl-selectfield label {
+  display: none;
+}
+
+/* Use custom arrow */
+/* line 338, ../sass/styles.scss */
+.mdl-selectfield select {
+  appearance: none;
+}
+
+/* line 339, ../sass/styles.scss */
+.mdl-selectfield {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  position: relative;
+}
+/* line 342, ../sass/styles.scss */
+.mdl-selectfield:after {
+  position: absolute;
+  top: 0.75em;
+  right: 0.5em;
+  /* Styling the down arrow */
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: .25em solid transparent;
+  border-right: .25em solid transparent;
+  border-top: 0.375em solid rgba(0,0,0, 0.12);
+  pointer-events: none;
+}
+
+/* line 363, ../sass/styles.scss */
+a {
+  color: black;
+}
+
+/* line 367, ../sass/styles.scss */
+.botones, input, textarea {
+  color: black;
+  outline: none;
+  font-family: "Roboto", 'sans-serif';
+  /* Rectangle 2 Copy 5: */
+  background: #D8D8D8;
+  border: 1px solid #979797;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 210px;
+  height: 35px;
+  padding-left: 10px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+/* line 383, ../sass/styles.scss */
+textarea {
+  width: 98%;
+  margin-top: 10px;
+  min-height: 150px;
+  padding-top: 10px;
+}
+
+/* line 390, ../sass/styles.scss */
+::-webkit-input-placeholder {
+  /* Usuario: */
+  font-family: "Roboto", 'sans-serif';
+  font-size: 15px;
+  color: black;
+}
+
+/* line 399, ../sass/styles.scss */
+.botones:focus, input:focus, textarea:focus {
+  background-color: #536363;
+  color: white;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 410, ../sass/styles.scss */
+form {
+  font-family: "Roboto", 'sans-serif';
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  /* Rectangle 3 Copy 29: */
+  background: #293333;
+  border-radius: 5px;
+}
+/* line 414, ../sass/styles.scss */
+form h3 {
+  font-family: "Roboto", 'sans-serif';
+  padding: 0px;
+  color: white;
+  font-weight: lighter;
+}
+
+/* line 427, ../sass/styles.scss */
+table {
+  border-spacing: 1px;
+  font-family: "Roboto", 'sans-serif';
+  min-width: 650px;
+  text-align: center;
+}
+/* line 432, ../sass/styles.scss */
+table th {
+  border-style: none;
+  font-size: 16px;
+  padding: 5px;
+  background-color: #293333;
+  color: white;
+  font-weight: bold;
+  max-width: 160px;
+}
+/* line 442, ../sass/styles.scss */
+table td {
+  font-size: 14px;
+  padding: 10px;
+  background-color: #79996D;
+  color: white;
+  font-weight: lighter;
+  max-width: 160px;
+}
+
+/* line 456, ../sass/styles.scss */
+table td:hover {
+  background-color: #536363;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 465, ../sass/styles.scss */
+.table-td {
+  /* Rectangle 3 Copy 28: */
+  background: #536363;
+  padding: 0px;
+}
+
+/* line 472, ../sass/styles.scss */
+.paginacion-primera, .paginacion-sig, .paginacion-ultima, .paginacion-ant {
+  width: 26px;
+  height: 24px;
+  border-style: none;
+  background: url("../images/paginacion-primera.svg") no-repeat scroll 0 0 transparent;
+}
+
+/* line 479, ../sass/styles.scss */
+.paginacion-sig {
+  background: url("../images/paginacion-sig.svg") no-repeat scroll 0 0 transparent;
+}
+
+/* line 484, ../sass/styles.scss */
+.paginacion-ultima {
+  background: url("../images/paginacion-ultima.svg") no-repeat scroll 0 0 transparent;
+}
+
+/* line 489, ../sass/styles.scss */
+.paginacion-ant {
+  background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
+}
+
+/* line 495, ../sass/styles.scss */
+h3 {
+  font-family: "Roboto", 'sans-serif';
+}
+
+/* line 501, ../sass/styles.scss */
+.button {
+  position: relative;
+  height: 56px;
+  width: 56px;
+  flex: 0 0 56px;
+  display: inline-block;
+  padding: 0;
+  margin: 4px;
+  border: 0;
+  border-radius: 100%;
+  overflow: hidden;
+  font-size: 34px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+/* line 515, ../sass/styles.scss */
+.button.secondary {
+  background: red;
+  color: black;
+}
+/* line 518, ../sass/styles.scss */
+.button.secondary .ripple:before {
+  background: black;
+}
+/* line 523, ../sass/styles.scss */
+.button .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  line-height: 56px;
+  pointer-events: white;
+}
+/* line 533, ../sass/styles.scss */
+.button .ripples {
+  flex-flow: row wrap;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
+}
+/* line 545, ../sass/styles.scss */
+.button .ripple {
+  -webkit-appearance: none;
+  position: relative;
+  display: flex;
+  margin: 0;
+  border: 0;
+  background: none;
+  flex: 0 0 12.5%;
+  padding-bottom: 12.5%;
+}
+/* line 555, ../sass/styles.scss */
+.button .ripple:focus {
+  outline: 0;
+}
+/* line 559, ../sass/styles.scss */
+.button .ripple:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -56px;
+  height: 112px;
+  width: 112px;
+  border-radius: 100%;
+  transform: scale(0);
+  opacity: 0.2;
+  pointer-events: none;
+}
+/* line 575, ../sass/styles.scss */
+.button .ripple:focus:before {
+  animation: grow 1s;
+}
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/* line 597, ../sass/styles.scss */
+button > img {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}

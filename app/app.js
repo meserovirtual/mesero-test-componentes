@@ -3,7 +3,15 @@
 
 // Declare app level module which depends on views, and components
   angular.module('mesero', ['oc.lazyLoad',
-    'ngRoute',
+      'ngRoute',
+      //'ngAnimate',
+      'angular-jwt',
+      'auth0',
+      'acUtils',
+      'acSucursales',
+      'acAutocomplete',
+      'acUsuarios',
+      'acUsuariosAdministracion',
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 

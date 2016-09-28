@@ -491,7 +491,7 @@ table td:hover{
 
 }
 
-<<<<<<< HEAD
+////// HEAD
 h3{
   font-family: "Roboto", 'sans-serif';
 }
@@ -510,7 +510,7 @@ $divider: sqrt($cells);
   border-radius: 100%;
   overflow: hidden;
   font-size: 34px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
   &.secondary {
     background: red;
@@ -522,7 +522,10 @@ $divider: sqrt($cells);
 
   .icon {
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     line-height: 56px;
     pointer-events: white;
   }
@@ -531,7 +534,10 @@ $divider: sqrt($cells);
     flex-flow: row wrap;
     display: flex;
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     border-radius: 100%;
     -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
   }
@@ -570,18 +576,26 @@ $divider: sqrt($cells);
         animation: grow 1s;
 
         @keyframes grow {
-          0% {transform: scale(0)}
-          70% {transform: scale(1); opacity: 0.2;}
-          100% {transform: scale(2); opacity: 0;}
+          0% {
+            transform: scale(0)
+          }
+          70% {
+            transform: scale(1);
+            opacity: 0.2;
+          }
+          100% {
+            transform: scale(2);
+            opacity: 0;
+          }
         }
       }
     }
   }
-=======
+}
+
 
 button > img{
   position: absolute;
   left: 25%;
   top: 25%;
->>>>>>> origin/master
 }

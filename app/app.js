@@ -12,6 +12,7 @@
       'acAutocomplete',
       'acUsuarios',
       'acUsuariosAdministracion',
+      'LangTables',
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 

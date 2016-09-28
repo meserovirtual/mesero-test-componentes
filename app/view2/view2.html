@@ -12,30 +12,13 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td class="">Apellido</td>
-        <td class="">Nombre</td>
-        <td class="">Telefono</td>
-        <td class="">Estado</td>
-      </tr>
-      <tr>
-        <td class="">Apellido</td>
-        <td class="">Nombre</td>
-        <td class="">Telefono</td>
-        <td class="">Estado</td>
-      </tr>
-      <tr>
-        <td class="">Apellido</td>
-        <td class="">Nombre</td>
-        <td class="">Telefono</td>
-        <td class="">Estado</td>
-      </tr>
-      <tr>
-        <td class="">Apellido</td>
-        <td class="">Nombre</td>
-        <td class="">Telefono</td>
-        <td class="">Estado</td>
-      </tr>
+        <tr ng-repeat="row in view2Ctrl.usuarios"
+            ng-click="">
+          <td class="">{{row.apellido}}</td>
+          <td class="">{{row.nombre}}</td>
+          <td class="">{{row.telefono}}</td>
+          <td class="">{{row.status}}</td>
+        </tr>
       </tbody>
       <tfoot>
       <tr>

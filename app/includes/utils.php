@@ -153,6 +153,7 @@ class Main
         }
         if (!isset($this->db)) {
             $this->db = get('mv-local');
+            //$this->db = get('mv-test');
         }
     }
 }

@@ -46,6 +46,17 @@
       setData(data);
     });
 
+    function save() {
+      if (vm.usuario.usuario_id == undefined) {
+        vm.usuario.status = 1;
+      }
+      UserService.save(vm.usuario).then(function (data) {
+        return UserService.get();
+      }).then(function (data) {
+        setData(data);
+      });
+
+    }
 
     // Implementación de la paginación
     vm.start = 0;

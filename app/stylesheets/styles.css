@@ -595,3 +595,19 @@ button > img {
     flex-direction: column;
   }
 }
+
+/* line 610, ../sass/styles.scss */
+.primary {
+  background-color: #00CE5D;
+}
+
+/* line 613, ../sass/styles.scss */
+.form-footer {
+  background-color: #79996D;
+  width: 451px;
+}
+
+/* line 617, ../sass/styles.scss */
+.terciary {
+  background-color: darkviolet;
+}

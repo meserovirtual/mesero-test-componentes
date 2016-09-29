@@ -123,19 +123,23 @@ class Main
         'Usuarios' => array('get' => -1,
             'login' => -1,
             'logout' => -1,
-            'create' => 0,
-            'update' => 0
+            'create' => -1,
+            'update' => -1
         ),
         'Productos' => array('getProductos' => -1,
             'getCategorias' => -1,
-            'createProducto' => 0,
-            'updateProducto' => 0
+            'createProducto' => -1,
+            'updateProducto' => -1
         ),
-        'Sucursales' => array(
-            'get' => -1, 'updateStock' => 0
+        'Sucursales' => array('get' => -1,
+            'create' => -1,
+            'update' => -1
         ),
         'Avisos' => array(
-            'get' => 1, 'create' => 0, 'update' => 0, 'remove' => 0
+            'get' => -1,
+            'create' => -1,
+            'update' => -1,
+            'remove' => -1
         )
     );
 

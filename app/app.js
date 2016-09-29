@@ -77,8 +77,14 @@
             }]
           }
         });
+      }]).controller('AppCtrl', AppCtrl);
 
+    AppCtrl.$inject = ['$scope'];
+    function AppCtrl($scope) {
 
-      }]);
+        var vm = this;
+        vm.hideLoader = true;
+
+    }
 
 })();

@@ -583,3 +583,15 @@ button > img {
   left: 25%;
   top: 25%;
 }
+
+/* line 603, ../sass/styles.scss */
+.mv-col {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 360px) {
+  /* line 603, ../sass/styles.scss */
+  .mv-col {
+    flex-direction: column;
+  }
+}

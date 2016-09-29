@@ -599,3 +599,11 @@ button > img{
   left: 25%;
   top: 25%;
 }
+
+.mv-col{
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 360px) {
+    flex-direction: column;
+  }
+}

@@ -12,6 +12,7 @@
       'acAutocomplete',
       'acUsuarios',
       'acUsuariosAdministracion',
+      'acSucursalesAdministracion',
       'LangTables',
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
@@ -77,6 +78,19 @@
             }]
           }
         });
+
+        $routeProvider.when('/view6', {
+          templateUrl: 'view6/view6.html',
+          controller: 'View6Ctrl',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+              loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                  // you can lazy load files for an existing module
+                  return $ocLazyLoad.load('view6/view6.js');
+              }]
+          }
+        });
+
       }]).controller('AppCtrl', AppCtrl);
 
     AppCtrl.$inject = ['$scope'];

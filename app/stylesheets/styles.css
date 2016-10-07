@@ -454,9 +454,12 @@ table td:hover {
   /* Rectangle 3 Copy 28: */
   background: #536363;
   padding: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-/* line 472, ../sass/styles.scss */
+/* line 476, ../sass/styles.scss */
 .paginacion-primera, .paginacion-sig, .paginacion-ultima, .paginacion-ant {
   width: 26px;
   height: 24px;
@@ -464,27 +467,27 @@ table td:hover {
   background: url("../images/paginacion-primera.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 479, ../sass/styles.scss */
+/* line 483, ../sass/styles.scss */
 .paginacion-sig {
   background: url("../images/paginacion-sig.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 484, ../sass/styles.scss */
+/* line 488, ../sass/styles.scss */
 .paginacion-ultima {
   background: url("../images/paginacion-ultima.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 489, ../sass/styles.scss */
+/* line 493, ../sass/styles.scss */
 .paginacion-ant {
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 495, ../sass/styles.scss */
+/* line 499, ../sass/styles.scss */
 h3 {
   font-family: "Roboto", 'sans-serif';
 }
 
-/* line 501, ../sass/styles.scss */
+/* line 505, ../sass/styles.scss */
 .button {
   position: relative;
   height: 56px;
@@ -499,16 +502,16 @@ h3 {
   font-size: 34px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
-/* line 515, ../sass/styles.scss */
+/* line 519, ../sass/styles.scss */
 .button.secondary {
   background: red;
   color: black;
 }
-/* line 518, ../sass/styles.scss */
+/* line 522, ../sass/styles.scss */
 .button.secondary .ripple:before {
   background: black;
 }
-/* line 523, ../sass/styles.scss */
+/* line 527, ../sass/styles.scss */
 .button .icon {
   position: absolute;
   top: 0;
@@ -516,9 +519,9 @@ h3 {
   bottom: 0;
   left: 0;
   line-height: 56px;
-  pointer-events: white;
+  pointer-events: #fff;
 }
-/* line 533, ../sass/styles.scss */
+/* line 537, ../sass/styles.scss */
 .button .ripples {
   flex-flow: row wrap;
   display: flex;
@@ -530,7 +533,7 @@ h3 {
   border-radius: 100%;
   -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
 }
-/* line 545, ../sass/styles.scss */
+/* line 549, ../sass/styles.scss */
 .button .ripple {
   -webkit-appearance: none;
   position: relative;
@@ -541,11 +544,11 @@ h3 {
   flex: 0 0 12.5%;
   padding-bottom: 12.5%;
 }
-/* line 555, ../sass/styles.scss */
+/* line 559, ../sass/styles.scss */
 .button .ripple:focus {
   outline: 0;
 }
-/* line 559, ../sass/styles.scss */
+/* line 563, ../sass/styles.scss */
 .button .ripple:before {
   content: '';
   display: block;
@@ -560,7 +563,7 @@ h3 {
   opacity: 0.2;
   pointer-events: none;
 }
-/* line 575, ../sass/styles.scss */
+/* line 579, ../sass/styles.scss */
 .button .ripple:focus:before {
   animation: grow 1s;
 }
@@ -577,37 +580,44 @@ h3 {
     opacity: 0;
   }
 }
-/* line 597, ../sass/styles.scss */
+/* line 601, ../sass/styles.scss */
 button > img {
   position: absolute;
   left: 25%;
   top: 25%;
 }
 
-/* line 603, ../sass/styles.scss */
+/* line 607, ../sass/styles.scss */
 .mv-col {
   display: flex;
   flex-direction: row;
 }
 @media (max-width: 360px) {
-  /* line 603, ../sass/styles.scss */
+  /* line 607, ../sass/styles.scss */
   .mv-col {
     flex-direction: column;
   }
 }
 
-/* line 610, ../sass/styles.scss */
+/* line 614, ../sass/styles.scss */
 .primary {
   background-color: #00CE5D;
 }
 
-/* line 613, ../sass/styles.scss */
+/* line 617, ../sass/styles.scss */
 .form-footer {
   background-color: #79996D;
   width: 451px;
 }
 
-/* line 617, ../sass/styles.scss */
+/* line 621, ../sass/styles.scss */
 .terciary {
   background-color: darkviolet;
+}
+
+/* line 624, ../sass/styles.scss */
+.input-paginacion {
+  width: 50px;
+  text-align: center;
+  margin: 5px;
 }

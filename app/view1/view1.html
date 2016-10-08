@@ -250,11 +250,23 @@
 <h1>Selectores</h1>
 
 <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <div class="row press">
-            <input type="checkbox" id="unchecked" class="cbx hidden"/>
-            <label for="unchecked" class="lbl"></label>
-        </div>
+    <div class="row press">
+        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+        <label for="unchecked" class="lbl"></label>
+    </div>
 
     <input id="check-one" class="effect-one" style="display: none" type="checkbox" checked><label for="check-one"><span class="inner"></span><span class="icon"></span></label>
+</section>
 
-  </section>
+<h1>Imagenes</h1>
+
+<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+    <div class="foto">
+        <span>Imagen 1</span>
+        <div id="slider-01-foto" class="input-foto">
+            <img ng-src="images/no_image.png" alt="" height="80" width="80">
+            <input type="file" name="images" id="images"
+                   ac-upload-files="$ctrl.updateFotoProyecto(selectedFileList,3,'')"/>
+        </div>
+    </div>
+</section>

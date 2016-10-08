@@ -7,8 +7,8 @@
       .controller('View1Ctrl', View1Ctrl);
 
 
-  View1Ctrl.$inject = ['$scope'];
-  function View1Ctrl($scope) {
+  View1Ctrl.$inject = ['$scope', 'UploadVars', 'UploadService'];
+  function View1Ctrl($scope, UploadVars, UploadService) {
 
     var vm = this;
 

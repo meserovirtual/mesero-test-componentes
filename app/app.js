@@ -8,12 +8,15 @@
       'angular-jwt',
       'auth0',
       'acUtils',
-      'acSucursales',
       'acAutocomplete',
       'acUsuarios',
       'acUsuariosAdministracion',
+      'acSucursales',
       'acSucursalesAdministracion',
       'LangTables',
+      'acUploads',
+      'acProductos',
+      'acProductosAdministracion'
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 

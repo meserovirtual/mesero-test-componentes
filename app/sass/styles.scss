@@ -626,3 +626,35 @@ button > img{
   text-align: center;
   margin: 5px;
 }
+
+.panel-primary {
+  border-color: #79996D;
+}
+.panel {
+  margin-bottom: 20px;
+  border: 1px solid #79996D;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  width: 100%;
+}
+.panel-primary>.panel-heading {
+  color: #fff;
+  background-color: #79996D;
+  border-color: #79996D;
+}
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-body {
+  padding: 15px;
+  min-height: 100px;
+  max-height: 230px;
+  overflow-y: auto;
+}

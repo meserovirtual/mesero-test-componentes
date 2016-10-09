@@ -1,293 +1,205 @@
-<h1>Botones</h1>
+<div ng-controller="View1Ctrl as view1Ctrl">
+    <h1>Botones</h1>
 
-<h3>Botones OK, Cancelar y Disable</h3>
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <button type="button" class="button secondary">
-        <div class="icon"></div>
-        <div class="ripples">
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
+    <h3>Botones OK, Agregar y Cancelar</h3>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+
+        <button type="button" class="boton-agregar">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="boton-ok">
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="boton-cancelar">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="boton-eliminar">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+
+    </section>
+
+     <h1>Inputs</h1>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <input class="botones" type="text" placeholder="Texto">
+        <input class="botones" type="password" placeholder="Contraseña">
+        <input class="botones" type="email" placeholder="Mail"> <br>
+        <textarea class="" type="button" ></textarea>
+    </section>
+
+
+    <h1>Formularios</h1>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <form class="">
+            <h3>Formulario de prueba</h3>
+        </form>
+    </section>
+
+    <h1>Grillas</h1>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <table>
+            <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Estado</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="">Apellido</td>
+                <td class="">Nombre</td>
+                <td class="">Telefono</td>
+                <td class="">Estado</td>
+            </tr>
+            <tr>
+                <td class="">Apellido</td>
+                <td class="">Nombre</td>
+                <td class="">Telefono</td>
+                <td class="">Estado</td>
+            </tr>
+            <tr>
+                <td class="">Apellido</td>
+                <td class="">Nombre</td>
+                <td class="">Telefono</td>
+                <td class="">Estado</td>
+            </tr>
+            <tr>
+                <td class="">Apellido</td>
+                <td class="">Nombre</td>
+                <td class="">Telefono</td>
+                <td class="">Estado</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4">
+                    <div class="table-td">
+                        <span>
+                            <button class="paginacion-primera"></button>
+                            <button class="paginacion-ant"></button>
+                        </span>
+                        <span class="paginacion-paginas">
+                            <span>Página 1 de 1</span>
+                        </span>
+                        <span class="paginacion-go-to">Ir a
+                            <input type="number" class="input-paginacion2">
+                        </span>
+                        <span>
+                            <button class="paginacion-sig"></button>
+                            <button class="paginacion-ultima"></button>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <h1>Listas</h1>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <div class="mdl-selectfield">
+            <label>Selecciona</label>
+            <select class="browser-default">
+                <option value="" disabled selected>Selecciona</option>
+                <option value="1">Opcion 1</option>
+                <option value="2">Opcion 2</option>
+                <option value="3">Opcion 3</option>
+            </select>
         </div>
-    </button>
-    <button type="button" class="button secondary">
-        <div class="icon"></div>
-        <div class="ripples">
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
-            <div tabindex="-1" class="ripple">     </div>
+    </section>
+
+    <h1>Selectores</h1>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <div class="row press">
+            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+            <label for="unchecked" class="lbl"></label>
         </div>
-    </button>
-    <button class="btn btn-warning" type="button"  disabled="disabled">Disabled</button>
-</section>
 
-<h3>Botones Redondos</h3>
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <button class="btn btn-redondo btn-primary" type="button" >Primary</button>
+        <input id="check-one" class="effect-one" style="display: none" type="checkbox" checked><label for="check-one"><span class="inner"></span><span class="icon"></span></label>
+    </section>
 
-</section>
+    <h1>Imagenes</h1>
 
-<h3>Botones con Imagenes</h3>
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <button class="btn btn-redondo btn-primary" type="button" >
-        <img src="images/btn_ok.png">
-    </button>
-    <button class="btn btn-redondo btn-warning" type="button"  disabled="disabled">
-        <img src="images/btn_delete.png">
-    </button>
-    <button class="btn btn-redondo btn-warning" type="button"  disabled="disabled">
-        <img src="images/btn_trash.png">
-    </button>
-</section>
-
-<h1>Inputs</h1>
-
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <input class="botones" type="text" placeholder="Texto">
-    <input class="botones" type="password" placeholder="Contraseña">
-    <input class="botones" type="email" placeholder="Mail"> <br>
-    <textarea class="" type="button" ></textarea>
-</section>
-
-
-<h1>Formularios</h1>
-
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <form class="">
-        <h3>Formulario de prueba</h3>
-    </form>
-</section>
-
-<h1>Grillas</h1>
-
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <table>
-        <thead>
-        <tr>
-            <th>Apellido</th>
-            <th>Nombre</th>
-            <th>Telefono</th>
-            <th>Estado</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="">Apellido</td>
-            <td class="">Nombre</td>
-            <td class="">Telefono</td>
-            <td class="">Estado</td>
-        </tr>
-        <tr>
-            <td class="">Apellido</td>
-            <td class="">Nombre</td>
-            <td class="">Telefono</td>
-            <td class="">Estado</td>
-        </tr>
-        <tr>
-            <td class="">Apellido</td>
-            <td class="">Nombre</td>
-            <td class="">Telefono</td>
-            <td class="">Estado</td>
-        </tr>
-        <tr>
-            <td class="">Apellido</td>
-            <td class="">Nombre</td>
-            <td class="">Telefono</td>
-            <td class="">Estado</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td colspan="4">
-                <div class="table-td">
-                    <span>
-                        <button class="paginacion-primera"></button>
-                        <button class="paginacion-ant"></button>
-                    </span>
-                    <span class="paginacion-paginas">
-                        <span>Página 1 de 1</span>
-                    </span>
-                    <span class="paginacion-go-to">Ir a
-                        <input type="number" class="input-paginacion">
-                    </span>
-                    <span>
-                        <button class="paginacion-sig"></button>
-                        <button class="paginacion-ultima"></button>
-                    </span>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <div class="foto">
+            <span class="titulo-imagen">Imagen 1</span>
+            <div id="slider-01-foto" class="input-foto">
+                <img ng-src="images/no_image.png" alt="" height="40" width="40">
+                <div class="wrapper">
+                <div class="file-upload">
+                <input type="file" />
+               <i class="fa fa-arrow-up"></i>
+                    </div>
                 </div>
-            </td>
-        </tr>
-        </tfoot>
-    </table>
-</section>
-
-<h1>Listas</h1>
-
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <div class="mdl-selectfield">
-        <label>Selecciona</label>
-        <select class="browser-default">
-            <option value="" disabled selected>Selecciona</option>
-            <option value="1">Opcion 1</option>
-            <option value="2">Opcion 2</option>
-            <option value="3">Opcion 3</option>
-        </select>
-    </div>
-</section>
-
-<h1>Selectores</h1>
-
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <div class="row press">
-        <input type="checkbox" id="unchecked" class="cbx hidden"/>
-        <label for="unchecked" class="lbl"></label>
-    </div>
-
-    <input id="check-one" class="effect-one" style="display: none" type="checkbox" checked><label for="check-one"><span class="inner"></span><span class="icon"></span></label>
-</section>
-
-<h1>Imagenes</h1>
-
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <div class="foto">
-        <span>Imagen 1</span>
-        <div id="slider-01-foto" class="input-foto">
-            <img ng-src="images/no_image.png" alt="" height="80" width="80">
-            <input type="file" name="images" id="images"
-                   ac-upload-files="$ctrl.updateFotoProyecto(selectedFileList,3,'')"/>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<h1>Panel</h1>
+    <h1>Panel</h1>
 
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-    <div class="panel panel-primary">
-        <div class="panel-heading">Cabecera Panel</div>
-        <div class="panel-body">
-            Cuerpo del Panel
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Cabecera Panel</div>
+            <div class="panel-body">
+                Cuerpo del Panel
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <h1>Buscador</h1>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <div class="input">
+            <input type="text" class="buscador" ng-model="view1Ctrl.filtro" placeholder="Buscar Sucursal">
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Sucursal</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in view1Ctrl.sucursales | filter:view1Ctrl.filtro | limitTo:view1Ctrl.limit:view1Ctrl.start">
+                <td class="">{{row.nombre}}</td>
+                <td class="">{{row.direccion}}</td>
+                <td class="">{{row.telefono}}</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4">
+                    <div class="table-td">
+                        <span>
+                            <button class="paginacion-primera" ng-click="view1Ctrl.first();"></button>
+                            <button class="paginacion-ant" ng-click="view1Ctrl.prev();"></button>
+                        </span>
+                        <span class="paginacion-paginas">
+                            <span>{{'PAGE' | xlat}} {{view1Ctrl.pagina}} {{'OF' | xlat}} {{view1Ctrl.paginas}}</span>
+                        </span>
+                        <span class="paginacion-go-to">{{'GO_TO' | xlat}}
+                            <input type="number" ng-model="view1Ctrl.pagina" ng-keyup="view1Ctrl.goToPagina();"
+                                   class="input-paginacion2">
+                        </span>
+                        <span>
+                            <button class="paginacion-sig" ng-click="view1Ctrl.next();"></button>
+                            <button class="paginacion-ultima"ng-click="view1Ctrl.last();"></button>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+</div>

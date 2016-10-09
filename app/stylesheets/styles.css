@@ -382,9 +382,10 @@ textarea {
   font-family: "Roboto", 'sans-serif';
   font-size: 15px;
   color: black;
+  opacity: .5;
 }
 
-/* line 399, ../sass/styles.scss */
+/* line 400, ../sass/styles.scss */
 .botones:focus, input:focus, textarea:focus {
   background-color: #536363;
   color: white;
@@ -394,7 +395,7 @@ textarea {
   transition: all .5s ease-in-out;
 }
 
-/* line 410, ../sass/styles.scss */
+/* line 411, ../sass/styles.scss */
 form {
   font-family: "Roboto", 'sans-serif';
   margin-top: 10px;
@@ -404,7 +405,7 @@ form {
   background: #293333;
   border-radius: 5px;
 }
-/* line 414, ../sass/styles.scss */
+/* line 415, ../sass/styles.scss */
 form h3 {
   font-family: "Roboto", 'sans-serif';
   padding: 0px;
@@ -412,14 +413,14 @@ form h3 {
   font-weight: lighter;
 }
 
-/* line 427, ../sass/styles.scss */
+/* line 428, ../sass/styles.scss */
 table {
   border-spacing: 1px;
   font-family: "Roboto", 'sans-serif';
   min-width: 650px;
   text-align: center;
 }
-/* line 432, ../sass/styles.scss */
+/* line 433, ../sass/styles.scss */
 table th {
   border-style: none;
   font-size: 16px;
@@ -429,7 +430,7 @@ table th {
   font-weight: bold;
   max-width: 160px;
 }
-/* line 442, ../sass/styles.scss */
+/* line 443, ../sass/styles.scss */
 table td {
   font-size: 14px;
   padding: 10px;
@@ -439,7 +440,7 @@ table td {
   max-width: 160px;
 }
 
-/* line 456, ../sass/styles.scss */
+/* line 457, ../sass/styles.scss */
 table td:hover {
   background-color: #536363;
   cursor: pointer;
@@ -449,7 +450,7 @@ table td:hover {
   transition: all .5s ease-in-out;
 }
 
-/* line 465, ../sass/styles.scss */
+/* line 466, ../sass/styles.scss */
 .table-td {
   /* Rectangle 3 Copy 28: */
   background: #536363;
@@ -459,7 +460,7 @@ table td:hover {
   align-items: center;
 }
 
-/* line 476, ../sass/styles.scss */
+/* line 477, ../sass/styles.scss */
 .paginacion-primera, .paginacion-sig, .paginacion-ultima, .paginacion-ant {
   width: 26px;
   height: 24px;
@@ -467,31 +468,31 @@ table td:hover {
   background: url("../images/paginacion-primera.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 483, ../sass/styles.scss */
+/* line 484, ../sass/styles.scss */
 .paginacion-sig {
   background: url("../images/paginacion-sig.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 488, ../sass/styles.scss */
+/* line 489, ../sass/styles.scss */
 .paginacion-ultima {
   background: url("../images/paginacion-ultima.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 493, ../sass/styles.scss */
+/* line 494, ../sass/styles.scss */
 .paginacion-ant {
   background: url("../images/paginacion-ant.svg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 499, ../sass/styles.scss */
+/* line 500, ../sass/styles.scss */
 h3 {
   font-family: "Roboto", 'sans-serif';
 }
 
-/* line 505, ../sass/styles.scss */
-.button {
+/* line 506, ../sass/styles.scss */
+.boton-agregar, .boton-cancelar, .boton-ok, .boton-eliminar {
   position: relative;
-  height: 56px;
-  width: 56px;
+  height: 32px;
+  width: 32px;
   flex: 0 0 56px;
   display: inline-block;
   padding: 0;
@@ -499,135 +500,100 @@ h3 {
   border: 0;
   border-radius: 100%;
   overflow: hidden;
-  font-size: 34px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-/* line 519, ../sass/styles.scss */
-.button.secondary {
-  background: red;
-  color: black;
-}
-/* line 522, ../sass/styles.scss */
-.button.secondary .ripple:before {
-  background: black;
-}
-/* line 527, ../sass/styles.scss */
-.button .icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  line-height: 56px;
-  pointer-events: #fff;
-}
-/* line 537, ../sass/styles.scss */
-.button .ripples {
-  flex-flow: row wrap;
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 100%;
-  -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
-}
-/* line 549, ../sass/styles.scss */
-.button .ripple {
-  -webkit-appearance: none;
-  position: relative;
-  display: flex;
-  margin: 0;
-  border: 0;
-  background: none;
-  flex: 0 0 12.5%;
-  padding-bottom: 12.5%;
-}
-/* line 559, ../sass/styles.scss */
-.button .ripple:focus {
-  outline: 0;
-}
-/* line 563, ../sass/styles.scss */
-.button .ripple:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -56px;
-  height: 112px;
-  width: 112px;
-  border-radius: 100%;
-  transform: scale(0);
-  opacity: 0.2;
-  pointer-events: none;
-}
-/* line 579, ../sass/styles.scss */
-.button .ripple:focus:before {
-  animation: grow 1s;
-}
-@keyframes grow {
-  0% {
-    transform: scale(0);
-  }
-  70% {
-    transform: scale(1);
-    opacity: 0.2;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-/* line 601, ../sass/styles.scss */
-button > img {
-  position: absolute;
-  left: 25%;
-  top: 25%;
+  font-size: 16px;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-/* line 607, ../sass/styles.scss */
+/* line 525, ../sass/styles.scss */
+.boton-cancelar {
+  background-color: #ED7161 !important;
+}
+
+/* line 530, ../sass/styles.scss */
+.boton-agregar {
+  background-color: #293333;
+}
+
+/* line 535, ../sass/styles.scss */
+.boton-ok {
+  background-color: #00CE5D;
+}
+
+/* line 540, ../sass/styles.scss */
+.boton-eliminar {
+  background-color: saddlebrown;
+}
+
+/* line 546, ../sass/styles.scss */
+.fa {
+  color: white;
+}
+
+/* line 550, ../sass/styles.scss */
+.boton-agregar:hover, .boton-cancelar:hover, .boton-ok:hover, .boton-eliminar:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer !important;
+  background-color: #79996D !important;
+  -ms-transform: scale(1.2, 1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2);
+  /* Safari */
+  transform: scale(1.2, 1.2);
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 567, ../sass/styles.scss */
 .mv-col {
   display: flex;
   flex-direction: row;
 }
 @media (max-width: 360px) {
-  /* line 607, ../sass/styles.scss */
+  /* line 567, ../sass/styles.scss */
   .mv-col {
     flex-direction: column;
   }
 }
 
-/* line 614, ../sass/styles.scss */
+/* line 574, ../sass/styles.scss */
 .primary {
   background-color: #00CE5D;
 }
 
-/* line 617, ../sass/styles.scss */
+/* line 577, ../sass/styles.scss */
 .form-footer {
   background-color: #79996D;
   width: 451px;
 }
 
-/* line 621, ../sass/styles.scss */
+/* line 581, ../sass/styles.scss */
 .terciary {
   background-color: darkviolet;
 }
 
-/* line 624, ../sass/styles.scss */
-.input-paginacion {
+/* line 584, ../sass/styles.scss */
+.input-paginacion, .input-paginacion2 {
   width: 50px;
   text-align: center;
   margin: 5px;
 }
 
-/* line 630, ../sass/styles.scss */
+/* line 590, ../sass/styles.scss */
+.input-paginacion2 {
+  height: 20px !important;
+}
+
+/* line 594, ../sass/styles.scss */
 .panel-primary {
   border-color: #79996D;
 }
 
-/* line 633, ../sass/styles.scss */
+/* line 597, ../sass/styles.scss */
 .panel {
   margin-bottom: 20px;
   border: 1px solid #79996D;
@@ -637,19 +603,19 @@ button > img {
   width: 100%;
 }
 
-/* line 641, ../sass/styles.scss */
+/* line 605, ../sass/styles.scss */
 .panel-primary > .panel-heading {
   color: #fff;
   background-color: #79996D;
   border-color: #79996D;
 }
 
-/* line 646, ../sass/styles.scss */
+/* line 610, ../sass/styles.scss */
 .panel-group .panel-heading {
   border-bottom: 0;
 }
 
-/* line 649, ../sass/styles.scss */
+/* line 613, ../sass/styles.scss */
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
@@ -657,10 +623,69 @@ button > img {
   border-top-right-radius: 3px;
 }
 
-/* line 655, ../sass/styles.scss */
+/* line 619, ../sass/styles.scss */
 .panel-body {
   padding: 15px;
   min-height: 100px;
   max-height: 230px;
   overflow-y: auto;
+}
+
+/* line 626, ../sass/styles.scss */
+.buscador {
+  width: 97%;
+  background: url(images/lupa.svg) no-repeat scroll 0px 0px;
+  padding-left: 40px;
+}
+
+/* line 632, ../sass/styles.scss */
+.titulo-imagen {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* line 638, ../sass/styles.scss */
+.input-foto {
+  margin-top: 10px;
+  display: flex;
+}
+
+/* line 643, ../sass/styles.scss */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* line 652, ../sass/styles.scss */
+.wrapper .file-upload {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #FFFFFF;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #79996d 50%, #ffffff 50%);
+  background-size: 100% 200%;
+  transition: all 1s;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+/* line 670, ../sass/styles.scss */
+.wrapper .file-upload input[type='file'] {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+/* line 682, ../sass/styles.scss */
+.wrapper .file-upload:hover {
+  background-position: 0 -100%;
+  color: #79996D;
 }

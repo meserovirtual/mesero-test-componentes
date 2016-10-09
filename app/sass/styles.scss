@@ -392,6 +392,7 @@ textarea{
   font-family: "Roboto", 'sans-serif';
   font-size: 15px;
   color: black;
+  opacity: .5;
 }
 
 
@@ -502,10 +503,10 @@ h3{
 
 $cells: 64;
 $divider: sqrt($cells);
-.button {
+.boton-agregar, .boton-cancelar, .boton-ok, .boton-eliminar {
   position: relative;
-  height: 56px;
-  width: 56px;
+  height: 32px;
+  width: 32px;
   flex: 0 0 56px;
   display: inline-block;
   padding: 0;
@@ -513,96 +514,55 @@ $divider: sqrt($cells);
   border: 0;
   border-radius: 100%;
   overflow: hidden;
-  font-size: 34px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 
-  &.secondary {
-    background: red;
-    color: black;
-    .ripple:before {
-      background: black;
-    }
-  }
+}
 
-  .icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    line-height: 56px;
-    pointer-events: #fff;
-  }
+.boton-cancelar{
+  background-color:#ED7161!important;
 
-  .ripples {
-    flex-flow: row wrap;
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 100%;
-    -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
-  }
+}
 
-  .ripple {
-    -webkit-appearance: none;
-    position: relative;
-    display: flex;
-    margin: 0;
-    border: 0;
-    background: none;
-    flex: 0 0 (100%/$divider);
-    padding-bottom: (100%/$divider);
+.boton-agregar{
+  background-color: #293333;
 
-    &:focus {
-      outline: 0;
-    }
+}
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -56px;
-      height: 56px*2;
-      width: 56px*2;
-      border-radius: 100%;
-      transform: scale(0);
-      opacity: 0.2;
-      pointer-events: none;
-    }
+.boton-ok{
+  background-color: #00CE5D;
 
-    &:focus {
-      &:before {
-        animation: grow 1s;
+}
 
-        @keyframes grow {
-          0% {
-            transform: scale(0)
-          }
-          70% {
-            transform: scale(1);
-            opacity: 0.2;
-          }
-          100% {
-            transform: scale(2);
-            opacity: 0;
-          }
-        }
-      }
-    }
-  }
+.boton-eliminar{
+  background-color: saddlebrown;
+
 }
 
 
-button > img{
-  position: absolute;
-  left: 25%;
-  top: 25%;
+.fa{
+  color: white;
 }
+
+.boton-agregar:hover, .boton-cancelar:hover, .boton-ok:hover, .boton-eliminar:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer!important;
+  background-color: #79996D!important;
+  -ms-transform: scale(1.2, 1.2); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2); /* Safari */
+  transform: scale(1.2, 1.2);
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+}
+
+
+
 
 .mv-col{
   display: flex;
@@ -621,10 +581,14 @@ button > img{
 .terciary{
   background-color: darkviolet;
 }
-.input-paginacion{
+.input-paginacion, .input-paginacion2{
   width: 50px;
   text-align: center;
   margin: 5px;
+}
+
+.input-paginacion2{
+  height: 20px!important;
 }
 
 .panel-primary {
@@ -657,4 +621,69 @@ button > img{
   min-height: 100px;
   max-height: 230px;
   overflow-y: auto;
+}
+
+.buscador{
+  width: 97%;
+  background: url(images/lupa.svg) no-repeat scroll 0px 0px;
+  padding-left:40px;
+}
+
+.titulo-imagen{
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.input-foto{
+  margin-top: 10px;
+  display: flex;
+}
+
+.wrapper{
+
+  width:100%;
+  height:100%;
+  display:flex;
+  //align-items:center;
+  //justify-content:center;
+
+
+  .file-upload{
+    height:30px;
+    width:30px;
+    border-radius: 100px;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+    border:4px solid #FFFFFF;
+    overflow:hidden;
+    background-image: linear-gradient(to bottom, #79996D 50%, #FFFFFF 50%);
+    background-size: 100% 200%;
+    transition: all 1s;
+    color: #FFFFFF;
+    font-size:12px;
+
+    input[type='file']{
+
+      height:30px;
+      width:30px;
+      position:absolute;
+      top:0;
+      left:0;
+      opacity:0;
+      cursor:pointer;
+
+    }
+
+    &:hover{
+      background-position: 0 -100%;
+      color:#79996D;
+    }
+
+
+  }
 }

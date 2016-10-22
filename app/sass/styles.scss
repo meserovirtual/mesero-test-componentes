@@ -376,6 +376,7 @@ a{
   width: 210px;
   height: 35px;
   padding-left: 10px;
+  font-size: 16px;
   font-weight: bolder;
   margin-bottom: 10px;
   }
@@ -442,7 +443,10 @@ min-width: 650px;
 
  td{
    font-size: 14px;
-   padding: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
    background-color: #79996D;
    color: white;
    font-weight: lighter;
@@ -538,7 +542,7 @@ $divider: sqrt($cells);
 }
 
 .boton-eliminar{
-  background-color: saddlebrown;
+  background-color: sandybrown;
 
 }
 
@@ -585,6 +589,7 @@ $divider: sqrt($cells);
   width: 50px;
   text-align: center;
   margin: 5px;
+  height: 20px;
 }
 
 .input-paginacion2{
@@ -636,10 +641,16 @@ $divider: sqrt($cells);
 }
 
 .input-foto{
+  margin-right: 10px;
   margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
+  text-align: center;
 }
 
+.foto{
+  text-align: center;
+}
 .wrapper{
 
   width:100%;
@@ -650,6 +661,7 @@ $divider: sqrt($cells);
 
 
   .file-upload{
+
     height:30px;
     width:30px;
     border-radius: 100px;
@@ -676,14 +688,62 @@ $divider: sqrt($cells);
       left:0;
       opacity:0;
       cursor:pointer;
-
     }
 
     &:hover{
       background-position: 0 -100%;
       color:#79996D;
     }
-
-
   }
 }
+
+.error-message{
+  //display: none;
+}
+
+.error-input{
+    background: #fff url("http://www.wallplayer.tv/images/wallplayer_en/icon_error_white.gif") no-repeat 97% center;
+    border-color: red;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 10px rgba(255,0,0,0.2);
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
+
+  }
+
+
+  @-webkit-keyframes shake {
+    0%, 100% {-webkit-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+  }
+
+  @-moz-keyframes shake {
+    0%, 100% {-moz-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+  }
+
+  @-o-keyframes shake {
+    0%, 100% {-o-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+  }
+
+  @keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+  }
+

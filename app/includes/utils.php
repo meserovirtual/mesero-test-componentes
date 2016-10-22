@@ -135,6 +135,10 @@ class Main
             'create' => -1,
             'update' => -1
         ),
+        'Categorias' => array('get' => -1,
+            'create' => -1,
+            'update' => -1
+        ),
         'Avisos' => array(
             'get' => -1,
             'create' => -1,
@@ -156,8 +160,8 @@ class Main
             echo 'Caught exception: ', $e->getMessage(), "\n";
         }
         if (!isset($this->db)) {
-            $this->db = get('mv-local');
-            //$this->db = get('mv-test');
+            //$this->db = get('mv-local');
+            $this->db = get('mv-test');
         }
     }
 }

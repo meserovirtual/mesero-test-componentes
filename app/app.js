@@ -16,7 +16,8 @@
       'LangTables',
       'acUploads',
       'acProductos',
-      'acProductosAdministracion'
+      'acProductosAdministracion',
+      'acCategoriasAdministracion',
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 
@@ -90,6 +91,18 @@
               loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                   // you can lazy load files for an existing module
                   return $ocLazyLoad.load('view6/view6.js');
+              }]
+          }
+        });
+
+        $routeProvider.when('/view7', {
+          templateUrl: 'view7/view7.html',
+          controller: 'View7Ctrl',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+              loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                  // you can lazy load files for an existing module
+                  return $ocLazyLoad.load('view7/view7.js');
               }]
           }
         });

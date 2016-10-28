@@ -13,11 +13,20 @@ body {
   /* Rectangle: */
   font-family: "Roboto", 'sans-serif';
   background-image: linear-gradient(-180deg, #EEEEEE 0%, #D8D8D8 100%);
-  padding: 50px!important;
-
+  //padding: 50px!important;
+  padding: 5px 10px;
 }
 
+section{
+  width: 620px;
+  @media (max-width: 360px) {
+    width: 100%;
+  }
+}
 
+.input {
+  margin-right: 10px;
+}
 
 //CONTROLES
 .btn{
@@ -85,10 +94,28 @@ body {
 }
 
 form{
-  background-color: #eee;
-  width: 451px;
+  font-family: "Roboto", 'sans-serif';
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #293333;
+  border-radius: 5px;
   min-height: 200px;
   color: white;
+  width: 500px;
+  padding: 10px;
+  /* Rectangle 3 Copy 29: */
+
+  h3{
+    font-family: "Roboto", 'sans-serif';
+    padding: 0px;
+    color: white;
+    font-weight: lighter;
+  }
+
+  @media (max-width: 360px) {
+    width: 100%;
+    padding: 0!important;
+  }
 }
 
 
@@ -315,7 +342,7 @@ $select-padding: 4px;
 select {
   font-family: "Roboto", 'sans-serif';
   font-weight: bold;
-  width: 222px;
+  width: 232px;
   padding: $select-padding 0;
   font-size: $select-font-size;
   color: black;
@@ -339,6 +366,7 @@ select:focus {
 .mdl-selectfield {
   font-family: 'Roboto','Helvetica','Arial',sans-serif;
   position: relative;
+  margin-right: 10px;
   &:after {
     position: absolute;
     top: 0.75em;
@@ -376,13 +404,14 @@ a{
   width: 210px;
   height: 35px;
   padding-left: 10px;
+  padding-right: 10px;
   font-size: 16px;
   font-weight: bolder;
   margin-bottom: 10px;
   }
 
 textarea{
-  width: 98%;
+  width: 93%;
   margin-top: 10px;
   min-height: 70px;
   padding-top: 10px;
@@ -409,31 +438,15 @@ textarea{
 }
 
 
-form{
-  font-family: "Roboto", 'sans-serif';
-  margin-top: 10px;
-  margin-bottom: 10px;
-  h3{
-    font-family: "Roboto", 'sans-serif';
-    padding: 0px;
-    color: white;
-    font-weight: lighter;
-  }
-  padding: 10px;
-  /* Rectangle 3 Copy 29: */
-  background: #293333;
-  border-radius: 5px;
-}
-
-
 table{
   border-spacing: 1px;
   font-family: "Roboto", 'sans-serif';
-min-width: 650px;
   text-align: center;
+  width: 100%;
+
  th{
    border-style: none;
-   font-size: 16px;
+   font-size: 12px;
    padding: 5px;
    background-color: #293333;
    color: white;
@@ -442,7 +455,7 @@ min-width: 650px;
  }
 
  td{
-   font-size: 14px;
+   font-size: 12px;
    padding-top: 5px;
    padding-bottom: 5px;
    padding-left: 10px;
@@ -454,6 +467,15 @@ min-width: 650px;
 
  }
 
+  @media (min-width: 361px) {
+    min-width: 650px;
+    th {
+      font-size: 16px;
+    }
+    td {
+      font-size: 14px;
+    }
+  }
 
 }
 
@@ -565,12 +587,10 @@ $divider: sqrt($cells);
 
 }
 
-
-
-
 .mv-col{
   display: flex;
   flex-direction: row;
+  padding: 10px;
   @media (max-width: 360px) {
     flex-direction: column;
   }
@@ -605,7 +625,10 @@ $divider: sqrt($cells);
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
-  width: 100%;
+  width: 500px;
+  @media (max-width: 360px) {
+    width: 100%;
+  }
 }
 .panel-primary>.panel-heading {
   color: #fff;
@@ -629,7 +652,7 @@ $divider: sqrt($cells);
 }
 
 .buscador{
-  width: 97%;
+  //width: 97%;
   background: url(images/lupa.svg) no-repeat scroll 0px 0px;
   padding-left:40px;
 }
@@ -650,6 +673,7 @@ $divider: sqrt($cells);
 
 .foto{
   text-align: center;
+  max-width: 85px;
 }
 .wrapper{
 

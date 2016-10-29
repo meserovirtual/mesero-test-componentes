@@ -744,6 +744,11 @@ h3 {
   color: #79996D;
 }
 
+/* line 724, ../sass/styles.scss */
+.error-message {
+  display: none;
+}
+
 /* line 728, ../sass/styles.scss */
 .error-input {
   background: #fff url("http://www.wallplayer.tv/images/wallplayer_en/icon_error_white.gif") no-repeat 97% center;

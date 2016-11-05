@@ -13,6 +13,9 @@
     var vm = this;
     vm.sucursales = [];
 
+    //FUNCIONES
+    vm.showMessage = showMessage;
+
     SucursalesService.get().then(function (data) {
       setData(data);
       console.log(data);
@@ -21,6 +24,16 @@
     function setData(data) {
       vm.sucursales = data;
     }
+
+    function showMessage(type) {
+      if(type == 'success') {
+        AcUtils.showMessage('success', 'Mensajes de operación exitosa');
+      } else {
+        AcUtils.showMessage('error', 'Mensajes de error');
+      }
+    }
+
+
 
     // Implementación de la paginación
     vm.start = 0;

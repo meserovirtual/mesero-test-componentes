@@ -521,25 +521,26 @@
         <!--<div id="menu-desktop-upper"></div>-->
         <div id="menu-desktop-lower">
           <div id="menu-desktop-lower-inner">
-            <a class="menu-desktop-btn ac-ripple" href="#!/working">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Platos">
               <img src="images/logo1.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Caja">
               <img src="images/logo2.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Reportes">
               <img src="images/logo3.svg" class="menu-icon">
             </a>
             <a class="menu-desktop-btn ac-ripple" href="#!/working">
               <img src="images/logo4.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/settings/controles" ng-click="appCtrl.menu = 'settings'">
+            <a class="menu-desktop-btn ac-ripple" href="#!/settings/controles" title="Configuración"
+               ng-click="appCtrl.menu = 'settings'">
               <img src="images/logo5.svg" class="menu-icon">
             </a>
             <a class="menu-desktop-btn ac-ripple" href="#!/working">
               <img src="images/logo6.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Cocina">
               <img src="images/logo7.svg" class="menu-icon">
             </a>
           </div>
@@ -565,27 +566,16 @@
   </div>
 
   <div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view1">Controles</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view2">ABM Clientes</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view3">ABM Proveedores</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view4">ABM Empleados</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view5">ABM Productos</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view6">ABM Sucursales</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view7">ABM Categorias</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/controles">Controles</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/proveedores">ABM Clientes</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/proveedores">ABM Proveedores</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/usuarios">ABM Empleados</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/productos">ABM Productos</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/sucursales">ABM Sucursales</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/categorias">ABM Categorias</a>
   </div>
-<!--
-  <ul class="menu">
-    <li><a href=""></a></li>
-    <li><a href="#!/clientes"></a></li>
-    <li><a href="#!/proveedores"></a></li>
-    <li><a href="#!/usuarios"></a></li>
-    <li><a href="#!/productos"></a></li>
-    <li><a href="#!/sucursales"></a></li>
-    <li><a href="#!/categorias"></a></li>
-  </ul>
--->
 
-  <div ng-view style="margin: 50px 25px 0 25px;"></div>
+  <div ng-view style="margin: 100px 25px 0 25px;"></div>
 
 </body>
 </html>

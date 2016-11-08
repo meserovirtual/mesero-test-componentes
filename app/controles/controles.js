@@ -3,12 +3,12 @@
   var scripts = document.getElementsByTagName("script");
   var currentScriptPath = scripts[scripts.length - 1].src;
 
-  angular.module('myApp.view1', ['ngRoute'])
-      .controller('View1Ctrl', View1Ctrl);
+  angular.module('myApp.controles', ['ngRoute'])
+      .controller('ControlesCtrl', ControlesCtrl);
 
 
-  View1Ctrl.$inject = ['$scope', 'UploadVars', 'UploadService', 'SucursalesVars', 'SucursalesService', 'AcUtils'];
-  function View1Ctrl($scope, UploadVars, UploadService, SucursalesVars, SucursalesService, AcUtils) {
+  ControlesCtrl.$inject = ['$scope', 'UploadVars', 'UploadService', 'SucursalesVars', 'SucursalesService', 'AcUtils'];
+  function ControlesCtrl($scope, UploadVars, UploadService, SucursalesVars, SucursalesService, AcUtils) {
 
     var vm = this;
     vm.sucursales = [];

@@ -3,12 +3,12 @@
   var scripts = document.getElementsByTagName("script");
   var currentScriptPath = scripts[scripts.length - 1].src;
 
-  angular.module('myApp.view3', ['ngRoute'])
-      .controller('View3Ctrl', View3Ctrl);
+  angular.module('myApp.productos', ['ngRoute'])
+      .controller('ProductosCtrl', ProductosCtrl);
 
 
-  View3Ctrl.$inject = ['$scope'];
-  function View3Ctrl($scope) {
+  ProductosCtrl.$inject = ['$scope'];
+  function ProductosCtrl($scope) {
 
     var vm = this;
 

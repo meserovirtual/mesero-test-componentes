@@ -1,15 +1,14 @@
 (function () {
   'use strict';
-
   var scripts = document.getElementsByTagName("script");
   var currentScriptPath = scripts[scripts.length - 1].src;
 
-  angular.module('myApp.view2', ['ngRoute'])
-      .controller('View2Ctrl', View2Ctrl);
+  angular.module('myApp.usuarios', ['ngRoute'])
+      .controller('UsuariosCtrl', UsuariosCtrl);
 
 
-  View2Ctrl.$inject = ['$scope'];
-  function View2Ctrl($scope) {
+  UsuariosCtrl.$inject = ['$scope'];
+  function UsuariosCtrl($scope) {
 
     var vm = this;
 

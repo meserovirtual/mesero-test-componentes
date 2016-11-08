@@ -3,12 +3,12 @@
     var scripts = document.getElementsByTagName("script");
     var currentScriptPath = scripts[scripts.length - 1].src;
 
-    angular.module('myApp.view6', ['ngRoute'])
-        .controller('View6Ctrl', View6Ctrl);
+    angular.module('myApp.categorias', ['ngRoute'])
+        .controller('CategoriasCtrl', CategoriasCtrl);
 
 
-    View6Ctrl.$inject = ['$scope'];
-    function View6Ctrl($scope) {
+    CategoriasCtrl.$inject = ['$scope'];
+    function CategoriasCtrl($scope) {
 
         var vm = this;
 

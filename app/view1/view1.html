@@ -1,104 +1,105 @@
-<div ng-controller="View1Ctrl as view1Ctrl">
-    <h1>Botones</h1>
+<div ng-controller="View1Ctrl as view1Ctrl" style="display: flex;">
+    <div class="mv-col-6">
+        <h1>Botones</h1>
 
-    <h3>Botones Agregar, Guardar, Cancelar, Borrar</h3>
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+        <h3>Botones Agregar, Guardar, Cancelar, Borrar</h3>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
 
-        <button type="button" class="boton-agregar">
-            <i class="fa fa-plus" aria-hidden="true"></i>
-        </button>
+            <button type="button" class="boton-agregar">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
 
-        <button type="button" class="boton-ok">
-            <i class="fa fa-check" aria-hidden="true"></i>
-        </button>
+            <button type="button" class="boton-ok">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </button>
 
-        <button type="button" class="boton-cancelar">
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
+            <button type="button" class="boton-cancelar">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
 
-        <button type="button" class="boton-eliminar">
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-        </button>
+            <button type="button" class="boton-eliminar">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
 
-    </section>
+        </section>
 
-     <h1>Inputs</h1>
+        <h1>Inputs</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <input class="botones" type="text" placeholder="Texto">
-        <input class="botones" type="password" placeholder="Contraseña">
-        <input class="botones" type="email" placeholder="Mail"> <br>
-        <textarea class="" type="button" ></textarea>
-    </section>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <input class="botones" type="text" placeholder="Texto">
+            <input class="botones" type="password" placeholder="Contraseña">
+            <input class="botones" type="email" placeholder="Mail"> <br>
+            <textarea class="" type="button" ></textarea>
+        </section>
 
 
-    <h1>Formularios</h1>
+        <h1>Formularios</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <form class="">
-            <h3>Formulario de prueba</h3>
-        </form>
-    </section>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <form class="">
+                <h3>Formulario de prueba</h3>
+            </form>
+        </section>
 
-    <h1>Validaciones</h1>
+        <h1>Validaciones</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <form class="" form-id="usuario-details">
-            <div class="mv-col">
-                <div class="input">
-                    <input id="nombre" type="text" placeholder="Sucursal"
-                           ac-validator is-required="Sucursal" autocomplete="off"/>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <form class="" form-id="usuario-details">
+                <div class="mv-col">
+                    <div class="input">
+                        <input id="nombre" type="text" placeholder="Sucursal"
+                               ac-validator is-required="Sucursal" autocomplete="off"/>
+                    </div>
+                    <div class="input">
+                        <input id="telefono" type="text" placeholder="Teléfono"
+                               ac-validator is-required="Teléfono" autocomplete="off"/>
+                    </div>
                 </div>
-                <div class="input">
-                    <input id="telefono" type="text" placeholder="Teléfono"
-                           ac-validator is-required="Teléfono" autocomplete="off"/>
-                </div>
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
 
-    <h1>Grillas</h1>
+        <h1>Grillas</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <table>
-            <thead>
-            <tr>
-                <th>Apellido</th>
-                <th>Nombre</th>
-                <th>Telefono</th>
-                <th>Estado</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="">Apellido</td>
-                <td class="">Nombre</td>
-                <td class="">Telefono</td>
-                <td class="">Estado</td>
-            </tr>
-            <tr>
-                <td class="">Apellido</td>
-                <td class="">Nombre</td>
-                <td class="">Telefono</td>
-                <td class="">Estado</td>
-            </tr>
-            <tr>
-                <td class="">Apellido</td>
-                <td class="">Nombre</td>
-                <td class="">Telefono</td>
-                <td class="">Estado</td>
-            </tr>
-            <tr>
-                <td class="">Apellido</td>
-                <td class="">Nombre</td>
-                <td class="">Telefono</td>
-                <td class="">Estado</td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <td colspan="4">
-                    <div class="table-td">
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <table>
+                <thead>
+                <tr>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="">Apellido</td>
+                    <td class="">Nombre</td>
+                    <td class="">Telefono</td>
+                    <td class="">Estado</td>
+                </tr>
+                <tr>
+                    <td class="">Apellido</td>
+                    <td class="">Nombre</td>
+                    <td class="">Telefono</td>
+                    <td class="">Estado</td>
+                </tr>
+                <tr>
+                    <td class="">Apellido</td>
+                    <td class="">Nombre</td>
+                    <td class="">Telefono</td>
+                    <td class="">Estado</td>
+                </tr>
+                <tr>
+                    <td class="">Apellido</td>
+                    <td class="">Nombre</td>
+                    <td class="">Telefono</td>
+                    <td class="">Estado</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <div class="table-td">
                         <span>
                             <button class="paginacion-primera"></button>
                             <button class="paginacion-ant"></button>
@@ -113,91 +114,93 @@
                             <button class="paginacion-sig"></button>
                             <button class="paginacion-ultima"></button>
                         </span>
-                    </div>
-                </td>
-            </tr>
-            </tfoot>
-        </table>
-    </section>
+                        </div>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </section>
+    </div>
 
-    <h1>Listas</h1>
+    <div class="mv-col-6">
+        <h1>Listas</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <div class="mdl-selectfield">
-            <label>Selecciona</label>
-            <select class="browser-default">
-                <option value="" disabled selected>Selecciona</option>
-                <option value="1">Opcion 1</option>
-                <option value="2">Opcion 2</option>
-                <option value="3">Opcion 3</option>
-            </select>
-        </div>
-    </section>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <div class="mdl-selectfield">
+                <label>Selecciona</label>
+                <select class="browser-default">
+                    <option value="" disabled selected>Selecciona</option>
+                    <option value="1">Opcion 1</option>
+                    <option value="2">Opcion 2</option>
+                    <option value="3">Opcion 3</option>
+                </select>
+            </div>
+        </section>
 
-    <h1>Selectores</h1>
+        <h1>Selectores</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <div class="row press">
-            <input type="checkbox" id="unchecked" class="cbx hidden"/>
-            <label for="unchecked" class="lbl"></label>
-        </div>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <div class="row press">
+                <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                <label for="unchecked" class="lbl"></label>
+            </div>
 
-        <input id="check-one" class="effect-one" style="display: none" type="checkbox" checked><label for="check-one"><span class="inner"></span><span class="icon"></span></label>
-    </section>
+            <input id="check-one" class="effect-one" style="display: none" type="checkbox" checked><label for="check-one"><span class="inner"></span><span class="icon"></span></label>
+        </section>
 
-    <h1>Imagenes</h1>
+        <h1>Imagenes</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <div class="foto">
-            <span class="titulo-imagen">Imagen 1</span>
-            <div id="slider-01-foto" class="input-foto">
-                <img ng-src="images/no_image.png" alt="" height="40" width="40">
-                <div class="wrapper">
-                <div class="file-upload">
-                <input type="file" />
-               <i class="fa fa-arrow-up"></i>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <div class="foto">
+                <span class="titulo-imagen">Imagen 1</span>
+                <div id="slider-01-foto" class="input-foto">
+                    <img ng-src="images/no_image.png" alt="" height="40" width="40">
+                    <div class="wrapper">
+                        <div class="file-upload">
+                            <input type="file" />
+                            <i class="fa fa-arrow-up"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <h1>Panel</h1>
+        <h1>Panel</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <div class="panel panel-primary">
-            <div class="panel-heading">Cabecera Panel</div>
-            <div class="panel-body">
-                Cuerpo del Panel
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Cabecera Panel</div>
+                <div class="panel-body">
+                    Cuerpo del Panel
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <h1>Buscador</h1>
+        <h1>Buscador</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <div class="input">
-            <input type="text" class="buscador" ng-model="view1Ctrl.filtro" placeholder="Buscar Sucursal">
-        </div>
-        <table>
-            <thead>
-            <tr>
-                <th>Sucursal</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="row in view1Ctrl.sucursales | filter:view1Ctrl.filtro | limitTo:view1Ctrl.limit:view1Ctrl.start">
-                <td class="">{{row.nombre}}</td>
-                <td class="">{{row.direccion}}</td>
-                <td class="">{{row.telefono}}</td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <td colspan="4">
-                    <div class="table-td">
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <div class="input">
+                <input type="text" class="buscador" ng-model="view1Ctrl.filtro" placeholder="Buscar Sucursal">
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Sucursal</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="row in view1Ctrl.sucursales | filter:view1Ctrl.filtro | limitTo:view1Ctrl.limit:view1Ctrl.start">
+                    <td class="">{{row.nombre}}</td>
+                    <td class="">{{row.direccion}}</td>
+                    <td class="">{{row.telefono}}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <div class="table-td">
                         <span>
                             <button class="paginacion-primera" ng-click="view1Ctrl.first();"></button>
                             <button class="paginacion-ant" ng-click="view1Ctrl.prev();"></button>
@@ -213,22 +216,23 @@
                             <button class="paginacion-sig" ng-click="view1Ctrl.next();"></button>
                             <button class="paginacion-ultima"ng-click="view1Ctrl.last();"></button>
                         </span>
-                    </div>
-                </td>
-            </tr>
-            </tfoot>
-        </table>
-    </section>
+                        </div>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </section>
 
-    <h1>Mensajes Error y Success</h1>
+        <h1>Mensajes Error y Success</h1>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-        <button type="button" class="boton-ok" ng-click="view1Ctrl.showMessage('success');">
-            <i class="fa fa-check" aria-hidden="true"></i>
-        </button>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
+            <button type="button" class="boton-ok" ng-click="view1Ctrl.showMessage('success');">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </button>
 
-        <button type="button" class="boton-cancelar" ng-click="view1Ctrl.showMessage('error');">
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-    </section>
+            <button type="button" class="boton-cancelar" ng-click="view1Ctrl.showMessage('error');">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </section>
+    </div>
 </div>

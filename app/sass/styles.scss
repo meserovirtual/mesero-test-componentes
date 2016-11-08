@@ -12,9 +12,16 @@ $color3: #446600;
 body {
   /* Rectangle: */
   font-family: "Roboto", 'sans-serif';
-  background-image: linear-gradient(-180deg, #EEEEEE 0%, #D8D8D8 100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
   //padding: 50px!important;
-  padding: 5px 10px;
+  //padding: 5px 10px;
+  margin: 0;
+  min-height: 2500px;
 }
 
 section{
@@ -101,7 +108,7 @@ form{
   border-radius: 5px;
   min-height: 200px;
   color: white;
-  width: 500px;
+  width: 475px;
   padding: 10px;
   /* Rectangle 3 Copy 29: */
 
@@ -411,7 +418,7 @@ a{
   }
 
 textarea{
-  width: 93%;
+  width: 95%;
   margin-top: 10px;
   min-height: 70px;
   padding-top: 10px;
@@ -439,7 +446,7 @@ textarea{
 
 
 table{
-  border-spacing: 1px;
+  border-spacing: 0px;
   font-family: "Roboto", 'sans-serif';
   text-align: center;
   width: 100%;
@@ -454,7 +461,12 @@ table{
    max-width: 160px;
  }
 
- td{
+  td{
+    padding: 5px;
+    border-spacing: 1px;
+  }
+
+ tr{
    font-size: 12px;
    padding-top: 5px;
    padding-bottom: 5px;
@@ -464,15 +476,23 @@ table{
    color: white;
    font-weight: lighter;
    max-width: 160px;
-
  }
+
+  tr:hover{
+    background-color: #536363!important;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
 
   @media (min-width: 361px) {
     min-width: 650px;
     th {
       font-size: 16px;
     }
-    td {
+    tr {
       font-size: 14px;
     }
   }
@@ -480,17 +500,9 @@ table{
 }
 
 
-table td:hover{
-  background-color: #536363;
-  cursor: pointer;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
 
 .table-td{
-  /* Rectangle 3 Copy 28: */
+  //* Rectangle 3 Copy 28: */
   background: #536363;
   padding: 0px;
   //Agregado por Mateo
@@ -590,10 +602,16 @@ $divider: sqrt($cells);
 .mv-col{
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  //padding: 10px;
   @media (max-width: 360px) {
     flex-direction: column;
   }
+}
+.mv-col-6{
+  width: 50%;
+}
+.mv-col-12{
+  width: 100%;
 }
 .primary{
   background-color: #00CE5D;
@@ -779,51 +797,50 @@ $divider: sqrt($cells);
 
 .ac-error-message {
   padding: 30px;
-  font-family: 'Raleway', sans-serif;
   font-size: 22px;
+  text-align: center;
   font-weight: bold;
   color: white;
   line-height: 26px;
-  width: 700px;
+  width: 300px;
   background-image: url('http://i.imgur.com/GnyDvKN.png');
   background-repeat: no-repeat;
-  background: rgba(206, 3, 50, 1);
-  background: -moz-radial-gradient(center, ellipse cover, rgba(206, 3, 50, 1) 0%, rgba(171, 3, 42, 0.91) 44%, rgba(198, 6, 51, 0.8) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(206, 3, 50, 1)), color-stop(44%, rgba(171, 3, 42, 0.91)), color-stop(100%, rgba(198, 6, 51, 0.8)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(206, 3, 50, 1) 0%, rgba(171, 3, 42, 0.91) 44%, rgba(198, 6, 51, 0.8) 100%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(206, 3, 50, 1) 0%, rgba(171, 3, 42, 0.91) 44%, rgba(198, 6, 51, 0.8) 100%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(206, 3, 50, 1) 0%, rgba(171, 3, 42, 0.91) 44%, rgba(198, 6, 51, 0.8) 100%);
-  background: radial-gradient(ellipse at center, rgba(206, 3, 50, 1) 0%, rgba(171, 3, 42, 0.91) 44%, rgba(198, 6, 51, 0.8) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0332', endColorstr='#c60633', GradientType=1);
+  height: 50px!important;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
+  background: #f85032; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
   -webkit-border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+
 
 }
 
 .ac-success-message {
+  text-align: center;
   padding: 30px;
-  font-family: 'Raleway', sans-serif;
   font-size: 22px;
   font-weight: bold;
   color: white;
   line-height: 26px;
-  width: 700px;
+  width: 300px;
+  height: 50px!important;
   background-image: url('http://i.imgur.com/GnyDvKN.png');
-  background-repeat: no-repeat;
-  background: rgba(164, 179, 87, 1);
-  background: -moz-radial-gradient(center, ellipse cover, rgba(164, 179, 87, 1) 0%, rgba(171, 184, 100, 0.91) 44%, rgba(171, 184, 100, 0.8) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(164, 179, 87, 1)), color-stop(44%, rgba(171, 184, 100, 0.91)), color-stop(100%, rgba(171, 184, 100, 0.8)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(164, 179, 87, 1) 0%, rgba(171, 184, 100, 0.91) 44%, rgba(171, 184, 100, 0.8) 100%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(164, 179, 87, 1) 0%, rgba(171, 184, 100, 0.91) 44%, rgba(171, 184, 100, 0.8) 100%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(164, 179, 87, 1) 0%, rgba(171, 184, 100, 0.91) 44%, rgba(171, 184, 100, 0.8) 100%);
-  background: radial-gradient(ellipse at center, rgba(164, 179, 87, 1) 0%, rgba(171, 184, 100, 0.91) 44%, rgba(171, 184, 100, 0.8) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0332', endColorstr='#c60633', GradientType=1);
-  -webkit-border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+  background: #bfd255; /* Old browsers */
+  background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+
 
 }
 
@@ -832,17 +849,18 @@ $divider: sqrt($cells);
   top: 16px !important;
   left: -1px !important;
   background-color: #a90329;
+  text-align: center;
   color: white;
-  width: 88%;
+  width: 400px;
+  height: 200px;
   margin-left: 26px;
   font-size: 14px;
-  padding-top: 4px;
-  padding-bottom: 1px;
+  padding: 30px;
   -webkit-border-radius: 2px;
   opacity: 0; /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
+  -webkit-animation: fadeIn ease-in-out 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in-out 1;
+  animation: fadeIn ease-in-out 1;
 
   -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode: forwards;
@@ -852,8 +870,485 @@ $divider: sqrt($cells);
   -moz-animation-duration: 1s;
   animation-duration: 1s;
 
-  -webkit-animation-delay: 0.1s;
-  -moz-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+  //-webkit-animation-delay: 0.3s;
+  //-moz-animation-delay: 0.3s;
+  //animation-delay: 0.3s;
 
 }
+
+button:focus { outline-style: none!important; }
+
+.row-warning{
+  background-color: yellow;
+  color:black;
+}
+
+//*******************************************************************************
+//SECCION PARA EL MENU
+.header {
+  font-family: 'Merriweather', serif;
+  font-weight: bolder;
+  color: white!important;;
+  width: 100%;
+  height: 50px;
+  background-color: #505050;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  @media (min-width: 800px) {
+    display: flex;
+    //justify-content: center;
+    height: 50px;
+    -webkit-box-shadow: 0px 15px 5px -9px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 15px 5px -9px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 15px 5px -9px rgba(0, 0, 0, 0.09);
+  }
+}
+
+.menu-icon{
+  width: 45px;
+  height: 45px;
+}
+
+.login-panel-form .botonera{
+  margin-bottom: 10px!important;
+}
+.botonera{
+  text-align: center;
+}
+
+.nav-button {
+  flex: 1;
+  margin-top: 15px;
+  margin-left: 15px;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  transform-origin: 13px 13px;
+  transform-style: preserve-3D;
+
+  div {
+    cursor: pointer;
+    width: 25px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+    margin: 4px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  .nav-button-top-transformed {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .nav-button-mid-transformed {
+    -webkit-transform: translate(-3px, 0px);
+    -moz-transform: translate(-3px, 0px);
+    -ms-transform: translate(-3px, 0px);
+    -o-transform: translate(-3px, 0px);
+    transform: translate(-3px, 0px);
+  }
+  .nav-button-bot-transformed {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu-mobile {
+  display: flex;
+  height: 100%;
+  z-index: 100;
+
+  .header-separator {
+    height: 40px;
+    margin-top: 5px;
+    width: 2px;
+    margin-left: 40px;
+    background-color: white;
+  }
+
+  .logo {
+    flex: 5;
+    padding: 5px;
+    margin-right: 15px;
+    text-align: right;
+    margin-top: 6px;
+  }
+}
+
+.menu-mobile-panel {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  background: rgb(164,169,181); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(164,169,181,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(164,169,181,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(164,169,181,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4a9b5', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0px;
+  top: 50px;
+  z-index: 500;
+  height: 100%;
+  text-align: center;
+  padding-top: 24px;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .2s;
+  -moz-animation-duration: .2s;
+  animation-duration: .2s;
+
+  a {
+    text-decoration: none;
+  }
+
+  .menu-desktop-btn {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: 'Droid Serif', serif;
+    font-weight: bold;
+    line-height: 16px;
+    font-size: 18px;
+    padding: 5px;
+    font-variant: all-petite-caps;
+    color: white;
+    @media (max-width: 800px) {
+      font-size: 24px;
+    }
+
+  }
+
+  -webkit-transform: translate(-1000px, 0);
+  -moz-transform: translate(-1000px, 0);
+  -ms-transform: translate(-1000px, 0);
+  -o-transform: translate(-1000px, 0);
+  transform: translate(-1000px, 0);
+
+  @media (min-width: 800px) {
+    visibility: collapse;
+    display: none;
+  }
+}
+
+.menu-mobile-panel-show {
+  -webkit-transform: translate(0px, 0);
+  -moz-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0);
+  -o-transform: translate(0px, 0);
+  transform: translate(0px, 0);
+}
+
+.menu-mobile-panel-show-add {
+  -webkit-animation: menu-mobile-enter 0.4s;
+  -o-animation: menu-mobile-enter 0.4s;
+  animation: menu-mobile-enter 0.4s;
+}
+
+.menu-mobile-panel-show-remove {
+
+  -webkit-animation: menu-mobile-leave 0.4s;
+  -o-animation: menu-mobile-leave 0.4s;
+  animation: menu-mobile-leave 0.4s;
+}
+
+@keyframes menu-mobile-enter {
+  0% {
+    -webkit-transform: translate(-1000px, 0);
+    -moz-transform: translate(-1000px, 0);
+    -ms-transform: translate(-1000px, 0);
+    -o-transform: translate(-1000px, 0);
+    transform: translate(-1000px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0);
+    -moz-transform: translate(0px, 0);
+    -ms-transform: translate(0px, 0);
+    -o-transform: translate(0px, 0);
+    transform: translate(0px, 0);
+  }
+
+}
+
+@keyframes menu-mobile-leave {
+  0% {
+    -webkit-transform: translate(0px, 0);
+    -moz-transform: translate(0px, 0);
+    -ms-transform: translate(0px, 0);
+    -o-transform: translate(0px, 0);
+    transform: translate(0px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-1000px, 0);
+    -moz-transform: translate(-1000px, 0);
+    -ms-transform: translate(-1000px, 0);
+    -o-transform: translate(-1000px, 0);
+    transform: translate(-1000px, 0);
+  }
+}
+
+.menu-type-desktop {
+
+  -webkit-transition: transform 0.4s ease;
+  -moz-transition: transform 0.4s ease;
+  -ms-transition: transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  @media (max-width: 799px) {
+    visibility: collapse;
+    display: none !important;
+  }
+}
+
+.menu-type-mobile {
+  @media (min-width: 800px) {
+    visibility: collapse;
+    display: none !important;
+  }
+}
+
+.header-as-main {
+  @media(min-width: 800px) {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    text-align: justify;
+    #menu-desktop-upper {
+    }
+    #menu-desktop-lower {
+    }
+
+    #menu-desktop-logo {
+      -webkit-transform: scale(5, 5);
+      -moz-transform: scale(5, 5);
+      -ms-transform: scale(5, 5);
+      -o-transform: scale(5, 5);
+      transform: scale(5, 5);
+
+      pointer-events: none;
+    }
+  }
+
+}
+
+#menu-mobile-logo {
+  opacity: 0;
+  margin-bottom: 30px;
+  -webkit-animation: fadeIn ease-in-out 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in-out 1;
+  animation: fadeIn ease-in-out 1;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+@keyframes latido {
+  0% {
+
+    -webkit-transform: scale(5, 5);
+    -moz-transform: scale(5, 5);
+    -ms-transform: scale(5, 5);
+    -o-transform: scale(5, 5);
+    transform: scale(5, 5);
+  }
+  75% {
+
+    -webkit-transform: scale(5.2, 5.2);
+    -moz-transform: scale(5.2, 5.2);
+    -ms-transform: scale(5.2, 5.2);
+    -o-transform: scale(5.2, 5.2);
+    transform: scale(5.2, 5.2);
+  }
+  100% {
+
+    -webkit-transform: scale(5, 5);
+    -moz-transform: scale(5, 5);
+    -ms-transform: scale(5, 5);
+    -o-transform: scale(5, 5);
+    transform: scale(5, 5);
+  }
+}
+
+.menu-desktop {
+  display: flex;
+  //flex-direction: column;
+  //align-items: center;
+  //justify-content: space-around;
+  //min-height: 100%;
+  //max-width: 1200px;
+  //min-width: 600px;
+  width: 100%;
+  height: 50px;
+  #menu-desktop-logo {
+    background-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    z-index: 401;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
+
+    img {
+
+    }
+
+  }
+
+  #menu-desktop-logo:hover {
+    cursor: pointer;
+  }
+
+  #menu-desktop-right {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-end;
+    width: 60%;
+    align-items: center;
+
+    .sub-menu{
+      font-family: "Roboto", 'sans-serif';
+      font-size: 14px;
+
+      a{
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+      a:hover{
+        color: #79996D;
+      }
+
+    }
+  }
+
+  #menu-desktop-left {
+
+    /*
+    #menu-desktop-upper {
+
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      flex: 0;
+    }*/
+
+    #menu-desktop-lower {
+      background-color: transparent;
+      max-width: 100%;
+
+      -webkit-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+      -ms-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+
+      #menu-desktop-lower-inner {
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .menu-desktop-btn {
+        cursor: pointer;
+        font-family: 'Oswald', sans-serif;
+        color: white;
+        //font-weight: lighter!important;
+        font-weight:bold;
+        text-decoration: none;
+        padding: 0 10px;
+        position: relative;
+        font-size: 12px;
+        opacity: 0;
+        //border-right: 0.1px solid white;
+
+        -webkit-animation: fadeIn ease-in-out 2; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+        -moz-animation: fadeIn ease-in-out 2;
+        animation: fadeIn ease-in-out 2;
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        animation-duration: 2s;
+      }
+
+      .menu-desktop-btn-selected {
+        color: bolder;
+        opacity: 1;
+      }
+      .menu-desktop-btn:hover,
+      .menu-desktop-btn:focus,
+      .menu-desktop-btn:active {
+        cursor: pointer;
+        color: #EF037C;
+        opacity: 1;
+        -webkit-transition: opacity 2s ease;
+        -moz-transition: opacity 2s ease;
+        -ms-transition: opacity 2s ease;
+        -o-transition: opacity 2s ease;
+        transition: opacity 2s ease;
+      }
+
+    }
+  }
+
+}
+//************************************************************************************
+
+

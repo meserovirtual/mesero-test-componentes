@@ -505,18 +505,87 @@
     </div>
   </div>
 
+  <div class="header" ng-class="{'display-header': !appCtrl.display_header, 'header-as-main': appCtrl.selectedPage == 'INICIO'}">
+    <div class="menu-mobile menu-type-mobile">
+      <div class="nav-button"
+           ng-click="appCtrl.menu_mobile_open = !appCtrl.menu_mobile_open;"
+           ng-class="{'nav-button-transformed':appCtrl.menu_mobile_open}">
+        <div ng-class="{'nav-button-top-transformed':appCtrl.menu_mobile_open}"></div>
+        <div ng-class="{'nav-button-mid-transformed':appCtrl.menu_mobile_open}"></div>
+        <div ng-class="{'nav-button-bot-transformed':appCtrl.menu_mobile_open}"></div>
+      </div>
+    </div>
+
+    <div class="menu-desktop menu-type-desktop" ng-class="{'display-menu-desktop':appCtrl.display_menu != true }">
+      <div id="menu-desktop-left">
+        <!--<div id="menu-desktop-upper"></div>-->
+        <div id="menu-desktop-lower">
+          <div id="menu-desktop-lower-inner">
+            <a class="menu-desktop-btn ac-ripple" href="#!/view1">
+              <img src="images/logo1.svg" class="menu-icon">
+            </a>
+            <a class="menu-desktop-btn ac-ripple" href="#!/view2">
+              <img src="images/logo2.svg" class="menu-icon">
+            </a>
+            <a class="menu-desktop-btn ac-ripple" href="#!/view3">
+              <img src="images/logo3.svg" class="menu-icon">
+            </a>
+            <a class="menu-desktop-btn ac-ripple" href="#!/view4">
+              <img src="images/logo4.svg" class="menu-icon">
+            </a>
+            <a class="menu-desktop-btn ac-ripple" href="#!/view5" ng-click="appCtrl.menu = 'settings'">
+              <img src="images/logo5.svg" class="menu-icon">
+            </a>
+            <a class="menu-desktop-btn ac-ripple" href="#!/view6">
+              <img src="images/logo6.svg" class="menu-icon">
+            </a>
+            <a class="menu-desktop-btn ac-ripple" href="#!/view7">
+              <img src="images/logo7.svg" class="menu-icon">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="menu-desktop-right">
+        <div ng-if="appCtrl.menu =='settings'" class="sub-menu">
+          <a href="#!/settings/view2" ng-click="appCtrl.sub_menu = 'clientes'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'clientes'}">Clientes</a>
+          <a href="#!/settings/view3" ng-click="appCtrl.sub_menu = 'proveedores'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'proveedores'}">Proveedores</a>
+          <a href="#!/settings/view4" ng-click="appCtrl.sub_menu = 'usuarios'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'usuarios'}">Usuarios</a>
+          <a href="#!/settings/view5" ng-click="appCtrl.sub_menu = 'productos'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'productos'}">Productos</a>
+          <a href="#!/settings/view6" ng-click="appCtrl.sub_menu = 'sucursales'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'sucursales'}">Sucursales</a>
+          <a href="#!/settings/view7" ng-click="appCtrl.sub_menu = 'categorias'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'categorias'}">Categorias</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view1">Controles</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view2">ABM Clientes</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view3">ABM Proveedores</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view4">ABM Empleados</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view5">ABM Productos</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view6">ABM Sucursales</a>
+    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/view7">ABM Categorias</a>
+  </div>
+<!--
   <ul class="menu">
-    <li><a href="#!/view1">Controles</a></li>
-    <li><a href="#!/view2">ABM Clientes</a></li>
-    <li><a href="#!/view3">ABM Proveedores</a></li>
-    <li><a href="#!/view4">ABM Empleados</a></li>
-    <li><a href="#!/view5">ABM Productos</a></li>
-    <li><a href="#!/view6">ABM Sucursales</a></li>
-    <li><a href="#!/view7">ABM Categorias</a></li>
+    <li><a href=""></a></li>
+    <li><a href="#!/view2"></a></li>
+    <li><a href="#!/view3"></a></li>
+    <li><a href="#!/view4"></a></li>
+    <li><a href="#!/view5"></a></li>
+    <li><a href="#!/view6"></a></li>
+    <li><a href="#!/view7"></a></li>
   </ul>
+-->
 
-
-  <div ng-view></div>
+  <div ng-view style="margin: 50px 25px 0 25px;"></div>
 
 </body>
 </html>

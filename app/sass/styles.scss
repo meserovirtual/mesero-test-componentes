@@ -328,6 +328,8 @@ h2{
   /* Rectangle 3 Copy 31: */
   background: #79996D;
   border-radius: 5px;
+  color: white;
+  font-weight: lighter;
   padding: 10px;
 }
 
@@ -616,7 +618,8 @@ $divider: sqrt($cells);
   //padding: 0 15px;
 }
 .container{
-  width: 700px;
+  //width: 700px;
+  width: 60%;
   margin: 0 auto;
 }
 .primary{
@@ -899,7 +902,7 @@ button:focus { outline-style: none!important; }
   height: 50px;
   background-color: #505050;
   position: fixed;
-  top: 0;
+  top: 20px;
   z-index: 1000;
   @media (min-width: 800px) {
     display: flex;
@@ -914,6 +917,27 @@ button:focus { outline-style: none!important; }
 .menu-icon{
   width: 45px;
   height: 45px;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon:hover, .menu-icon2:hover{
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+  cursor: pointer;
+
+}
+
+.menu-icon2{
+  width: 39px;
+  height: 90px;
+  position: relative;
+  margin-top: -30px;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .login-panel-form .botonera{
@@ -1275,7 +1299,13 @@ button:focus { outline-style: none!important; }
         margin: 0 15px;
       }
       a:hover{
-        color: #79996D;
+        color: #79996D!important;
+        cursor: pointer;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
       }
 
     }
@@ -1318,7 +1348,7 @@ button:focus { outline-style: none!important; }
         //font-weight: lighter!important;
         font-weight:bold;
         text-decoration: none;
-        padding: 0 10px;
+        padding: 3px 10px;
         position: relative;
         font-size: 12px;
         opacity: 0;
@@ -1359,65 +1389,20 @@ button:focus { outline-style: none!important; }
 
 
 //************************************************************************************
-//copiado de bayres
-.form {
-  width: 100%;
-  //margin: 10px;
-  padding: 10px;
+.form-container{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  //@include degradado_principal($color2, $color3);
-  background-color: #293333;
+  flex-direction: row;
+  width: 85%;
 }
-.details {
-  padding: 0 10px;
-  background-color: rgba(128, 128, 128, 0.4);
-  //width: 40%;
-  width: 50%;
-  position: absolute;
-  //border: solid 2px white;
-  right: 0;
-  top: 40px;
-  //height: 100%;
-  //max-height: 100%;
-  bottom: 0;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  overflow-y: auto;
-  -webkit-transform: translate(1000px, 0);
-  -moz-transform: translate(1000px, 0);
-  -ms-transform: translate(1000px, 0);
-  -o-transform: translate(1000px, 0);
-  transform: translate(1000px, 0);
-  -webkit-transition: transform 0.4s ease-in-out;
-  -moz-transition: transform 0.4s ease-in-out;
-  -ms-transition: transform 0.4s ease-in-out;
-  -o-transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
+.form-lista{
+  width: 55%;
+  margin: 0 3%;
+}
+.form-abm{
+  display: none;
+}
+.form-open{
+  display: inline;
+  width: 40%;
 }
 
-.details-open {
-  -webkit-transform: translate(0, 0) !important;
-  -moz-transform: translate(0, 0) !important;
-  -ms-transform: translate(0, 0) !important;
-  -o-transform: translate(0, 0) !important;
-  transform: translate(0, 0) !important;
-}
-.detalle-container {
-  color: white;
-  text-transform: uppercase;
-  padding: 40px;
-  margin: 10px;
-  position: relative;
-  background-color: #515C4B;
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.45);
-  max-height: 90%;
-  overflow-y: auto;
-  width: 85%;
-  text-align: center;
-}

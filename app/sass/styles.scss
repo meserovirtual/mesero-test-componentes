@@ -567,7 +567,7 @@ h3{
 
 $cells: 64;
 $divider: sqrt($cells);
-.boton-agregar, .boton-cancelar, .boton-ok, .boton-eliminar {
+.boton-agregar, .boton-cancelar, .boton-ok, .boton-eliminar, .boton-calendario {
   position: relative;
   height: 32px;
   width: 32px;
@@ -605,13 +605,15 @@ $divider: sqrt($cells);
   background-color: sandybrown;
 
 }
-
+.boton-calendario{
+  background-color: #447EAF;
+}
 
 .fa{
   color: white;
 }
 
-.boton-agregar:hover, .boton-cancelar:hover, .boton-ok:hover, .boton-eliminar:hover {
+.boton-agregar:hover, .boton-cancelar:hover, .boton-ok:hover, .boton-eliminar:hover, .boton-calendario:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer!important;
   background-color: #79996D!important;
@@ -702,7 +704,7 @@ $divider: sqrt($cells);
 }
 
 input.buscador{
-  width: 99%!important;
+  //width: 99%!important;
   background: url(images/lupa.svg) no-repeat scroll 0px 0px;
   padding-left:40px;
 }
@@ -832,55 +834,82 @@ input.buscador{
 
 //************************************************************************************
 //PARA LOS MENSAJES DE ERROR
+.ac-mensaje-custom-show{
+  position: fixed;
+  height: 60px;
+  width: 440px;
+  top:50%;
+  left: calc(50% - 220px);
 
-.ac-error-message {
-  padding: 30px;
-  font-size: 22px;
-  text-align: center;
-  font-weight: bold;
+  i {
+    vertical-align: middle;
+    padding: 10px 10px 10px 0;
+
+    &.exit-button{
+      float: right;
+      opacity: .4;
+      padding: 10px 0 10px 10px;
+      &:hover{
+        opacity: .8;
+        cursor: pointer;
+
+      }
+    }
+  }
+}
+.ac-error-message, .ac-success-message, .ac-info-message, .ac-warning-message {
+  padding: 20px;
+  font-size: 16px;
+  //text-align: center;
+  //font-weight: bold;
   color: white;
   line-height: 26px;
-  width: 300px;
+  //width: 300px;
+  //height: 60px;
   background-image: url('http://i.imgur.com/GnyDvKN.png');
-  background-repeat: no-repeat;
-  height: 50px!important;
+  //background-repeat: no-repeat;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.ac-error-message {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
   background: #f85032; /* Old browsers */
   background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
-  -webkit-border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
-
-
 }
 
 .ac-success-message {
-  text-align: center;
-  padding: 30px;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  line-height: 26px;
-  width: 300px;
-  height: 50px!important;
-  background-image: url('http://i.imgur.com/GnyDvKN.png');
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
   background: #bfd255; /* Old browsers */
   background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
-  -webkit-border-radius: 2px;
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
-
-
 }
+
+.ac-info-message{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+  background: #CDE8F6; /* Old browsers */
+  background: -moz-linear-gradient(top,  #CDE8F6 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #CDE8F6 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #CDE8F6 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CDE8F6', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+}
+
+.ac-warning-message{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+  background: #F8F4D5; /* Old browsers */
+  background: -moz-linear-gradient(top,  #F8F4D5 0%, #e9dd7e 50%, #96722E 51%, #9ecb2d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #F8F4D5 0%,#e9dd7e 50%,#96722E 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #F8F4D5 0%,#e9dd7e 50%,#96722E 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F8F4D5', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+}
+
 
 .error-message {
   position: absolute;
@@ -1622,3 +1651,67 @@ ol, ul {
   }
 }
 
+//***************************************************************
+ul.enlarge{
+  list-style-type:none; /*remove the bullet point*/
+  margin-left:0;
+  background-color: transparent;
+}
+ul.enlarge li{
+  display:inline-block; /*places the images in a line*/
+  position: relative;
+  z-index: 0; /*resets the stack order of the list items - later we'll increase this*/
+  //margin:10px 40px 0 20px;
+}
+ul.enlarge img{
+  background-color:#eae9d4;
+  //padding: 6px;
+  //-webkit-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+  //-moz-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+  //box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+  //-webkit-border-radius: 4px;
+  //-moz-border-radius: 4px;
+  //border-radius: 4px;
+}
+ul.enlarge span{
+  position:absolute;
+  left: -9999px;
+  background-color:#dddddd;
+  padding: 10px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size:.9em;
+  text-align: center;
+  color: #495a62;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0 , 0, 0.75);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius:8px;
+}
+ul.enlarge li:hover{
+  z-index: 50;
+  cursor:pointer;
+}
+ul.enlarge span img{
+  padding:2px;
+  background:#ccc;
+  height: 250px !important;
+  width: 250px !important;
+}
+ul.enlarge li:hover span{
+  //top: -300px; /*the distance from the bottom of the thumbnail to the top of the popup image*/
+  //left: -20px; /*distance from the left of the thumbnail to the left of the popup image*/
+  top:-300px;
+  left: -120px;
+}
+ul.enlarge li:hover:nth-child(2) span{
+  left: -100px;
+}
+ul.enlarge li:hover:nth-child(3) span{
+  left: -200px;
+}
+/**IE Hacks - see http://css3pie.com/ for more info on how to use CS3Pie and to download the latest version**/
+ul.enlarge img, ul.enlarge span{
+  behavior: url(pie/PIE.htc);
+}

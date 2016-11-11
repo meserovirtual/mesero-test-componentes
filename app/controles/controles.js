@@ -32,8 +32,12 @@
     function showMessage(type) {
       if(type == 'success') {
         AcUtils.showMessage('success', 'Mensajes de operación exitosa');
-      } else {
+      } else if(type == 'error') {
         AcUtils.showMessage('error', 'Mensajes de error');
+      } else if(type == 'info') {
+        AcUtils.showMessage('info', 'Mensajes de información');
+      } else if(type == 'warning') {
+        AcUtils.showMessage('warning', 'Mensajes de precaución');
       }
     }
 

@@ -12,9 +12,13 @@
 
     var vm = this;
     vm.sucursales = [];
+    vm.item1, vm.item2, vm.item3 = false;
 
     //FUNCIONES
     vm.showMessage = showMessage;
+
+    console.log(vm.item);
+    console.log(vm.item2);
 
     SucursalesService.get().then(function (data) {
       setData(data);

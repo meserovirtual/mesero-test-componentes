@@ -140,12 +140,49 @@
         <h1>Selectores</h1>
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-            <div class="row press">
+            <!--<div class="row press">
                 <input type="checkbox" id="unchecked" class="cbx hidden"/>
                 <label for="unchecked" class="lbl"></label>
             </div>
 
             <input id="check-one" class="effect-one" style="display: none" type="checkbox" checked><label for="check-one"><span class="inner"></span><span class="icon"></span></label>
+            -->
+            <ul class="list">
+                <li class="list__item">
+                    <label class="label--checkbox" ng-click="$ctrl.item1=!$ctrl.item1">
+                        <input type="checkbox" class="checkbox" id="check-1" ng-checked="$ctrl.item1">Selector 1
+                    </label>
+                </li>
+                <li class="list__item">
+                    <label class="label--checkbox" ng-click="$ctrl.item2=!$ctrl.item2">
+                        <input type="checkbox" class="checkbox" id="check-2" ng-checked="$ctrl.item2">Selector 2
+                    </label>
+                </li>
+                <li class="list__item">
+                    <label class="label--checkbox" ng-click="$ctrl.item3=!$ctrl.item3">
+                        <input type="checkbox" class="checkbox" id="check-3" ng-checked="$ctrl.item3">Selector 3
+                    </label>
+                </li>
+            </ul>
+
+            <ul class="list">
+                <li class="list__item">
+                    <label class="label--radio">
+                        <input type="radio" class="radio" checked name="item">Item 1
+                    </label>
+                </li>
+                <li class="list__item">
+                    <label class="label--radio">
+                        <input type="radio" class="radio" name="item">Item 2
+                    </label>
+                </li>
+                <li class="list__item">
+                    <label class="label--radio">
+                        <input type="radio" class="radio" name="item">Item 3
+                    </label>
+                </li>
+            </ul>
+
         </section>
 
         <h1>Imagenes</h1>

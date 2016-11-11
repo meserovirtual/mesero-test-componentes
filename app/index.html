@@ -505,6 +505,9 @@
     </div>
   </div>
 
+  <div class="login">
+
+  </div>
   <div class="header" ng-class="{'display-header': !appCtrl.display_header, 'header-as-main': appCtrl.selectedPage == 'INICIO'}">
     <div class="menu-mobile menu-type-mobile">
       <div class="nav-button"
@@ -521,26 +524,32 @@
         <!--<div id="menu-desktop-upper"></div>-->
         <div id="menu-desktop-lower">
           <div id="menu-desktop-lower-inner">
-            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Platos">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Platos"
+               ng-click="appCtrl.menu = 'platos'">
               <img src="images/logo1.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Caja">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Caja"
+               ng-click="appCtrl.menu = 'caja'">
               <img src="images/logo2.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Reportes">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Reportes"
+               ng-click="appCtrl.menu = 'reportes'">
               <img src="images/logo3.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Carrito"
+               ng-click="appCtrl.menu = 'carrito'">
               <img src="images/logo4.svg" class="menu-icon">
             </a>
             <a class="menu-desktop-btn ac-ripple" href="#!/settings/controles" title="Configuración"
                ng-click="appCtrl.menu = 'settings'">
               <img src="images/logo5.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Pago"
+               ng-click="appCtrl.menu = 'pago'">
               <img src="images/logo6.svg" class="menu-icon">
             </a>
-            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Cocina">
+            <a class="menu-desktop-btn ac-ripple" href="#!/working" title="Cocina"
+               ng-click="appCtrl.menu = 'cocina'">
               <img src="images/logo7.svg" class="menu-icon">
             </a>
           </div>
@@ -575,7 +584,7 @@
     <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/categorias">ABM Categorias</a>
   </div>
 
-  <div ng-view style="margin: 100px 25px 0 25px;"></div>
+  <div ng-view style="margin: 130px 25px 0 25px;"></div>
 
 </body>
 </html>

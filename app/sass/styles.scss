@@ -92,11 +92,25 @@ section{
   }
 
 
-.btn-primary{
-  background-color: $clr_control_primary;
+.btn-success{
+  background-color: #DDF3D5;
+  border: #9ddc86 2px solid;
+  color: #597151;
 }
 .btn-warning{
-  background-color: rgb(244,81,30);
+  background-color: #F8F4D5;
+  border: #e9dd7e 2px solid;
+  color: #96722E;
+}
+.btn-info{
+  background-color: #CDE8F6;
+  border: #2697d1 2px solid;
+  color: #447EAF;
+}
+.btn-error{
+  background-color: #ECC8C5;
+  border: #d37f78 2px solid;
+  color: #B83C37;
 }
 
 .btn-redondo{
@@ -836,10 +850,11 @@ input.buscador{
 //PARA LOS MENSAJES DE ERROR
 .ac-mensaje-custom-show{
   position: fixed;
-  height: 60px;
-  width: 440px;
+  height: 50px;
+  width: 300px;
   top:50%;
-  left: calc(50% - 220px);
+  left: calc(50% - 150px);
+  vertical-align: middle;
 
   i {
     vertical-align: middle;
@@ -847,6 +862,7 @@ input.buscador{
 
     &.exit-button{
       float: right;
+      vertical-align: middle;
       opacity: .4;
       padding: 10px 0 10px 10px;
       &:hover{
@@ -857,16 +873,25 @@ input.buscador{
     }
   }
 }
+
+$info: #CDE8F6;
+$info-text: #447EAF;
+$warn: #F8F4D5;
+$warn-text: #96722E;
+$error: #ECC8C5;
+$error-text: #B83C37;
+$success: #DDF3D5;
+$success-text: #597151;
+
 .ac-error-message, .ac-success-message, .ac-info-message, .ac-warning-message {
   padding: 20px;
   font-size: 16px;
   //text-align: center;
   //font-weight: bold;
-  color: white;
   line-height: 26px;
   //width: 300px;
   //height: 60px;
-  background-image: url('http://i.imgur.com/GnyDvKN.png');
+  //background-image: url('http://i.imgur.com/GnyDvKN.png');
   //background-repeat: no-repeat;
   -webkit-border-radius: 2px;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -875,39 +900,27 @@ input.buscador{
 }
 
 .ac-error-message {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
-  background: #f85032; /* Old browsers */
-  background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+  background-color: $error;
+  border:  darken($error, 20%) 2px solid;
+  color: $error-text!important;
 }
 
 .ac-success-message {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
-  background: #bfd255; /* Old browsers */
-  background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+  background-color: $success;
+  border:  darken($success, 20%) 2px solid;
+  color: $success-text;
 }
 
 .ac-info-message{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
-  background: #CDE8F6; /* Old browsers */
-  background: -moz-linear-gradient(top,  #CDE8F6 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #CDE8F6 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #CDE8F6 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CDE8F6', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+  background-color: $info;
+  border:  darken($info, 40%) 2px solid;
+  color: $info-text!important;
 }
 
 .ac-warning-message{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
-  background: #F8F4D5; /* Old browsers */
-  background: -moz-linear-gradient(top,  #F8F4D5 0%, #e9dd7e 50%, #96722E 51%, #9ecb2d 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #F8F4D5 0%,#e9dd7e 50%,#96722E 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #F8F4D5 0%,#e9dd7e 50%,#96722E 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F8F4D5', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+   background-color: $warn;
+  border:  darken($warn, 20%) 2px solid;
+  color: $warn-text!important;
 }
 
 
@@ -917,7 +930,6 @@ input.buscador{
   left: -1px !important;
   background-color: #a90329;
   text-align: center;
-  color: white;
   width: 400px;
   height: 200px;
   margin-left: 26px;

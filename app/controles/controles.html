@@ -260,24 +260,16 @@
             </table>
         </section>
 
-        <h1>Mensajes Error y Success</h1>
+        <h1>Mensajes Error, Success, Info y Warning</h1>
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-            <button type="button" class="boton-ok" ng-click="view1Ctrl.showMessage('success');">
-                <i class="fa fa-check" aria-hidden="true"></i>
-            </button>
+            <button type="button" class="btn btn-success" ng-click="view1Ctrl.showMessage('success');">Mensaje Success</button>
 
-            <button type="button" class="boton-cancelar" ng-click="view1Ctrl.showMessage('error');">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </button>
+            <button type="button" class="btn btn-error" ng-click="view1Ctrl.showMessage('error');">Mensaje Error</button>
 
-            <button type="button" class="boton-agregar" ng-click="view1Ctrl.showMessage('info');">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
+            <button type="button" class="btn btn-info" ng-click="view1Ctrl.showMessage('info');">Mensaje Info</button>
 
-            <button type="button" class="boton-eliminar" ng-click="view1Ctrl.showMessage('warning');">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-            </button>
+            <button type="button" class="btn btn-warning" ng-click="view1Ctrl.showMessage('warning');">Mensaje Warning</button>
         </section>
     </div>
 </div>

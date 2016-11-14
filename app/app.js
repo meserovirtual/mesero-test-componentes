@@ -121,11 +121,19 @@
 
       }]).controller('AppCtrl', AppCtrl);
 
-    AppCtrl.$inject = ['$scope'];
-    function AppCtrl($scope) {
+    AppCtrl.$inject = ['$scope', '$location'];
+    function AppCtrl($scope, $location) {
 
         var vm = this;
         vm.hideLoader = true;
+        vm.sub_menu_mobile_open = false;
+
+        vm.goToPagina = goToPagina;
+
+
+        function goToPagina(page) {
+            $location.path(page);
+        }
 
     }
 

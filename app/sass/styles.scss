@@ -492,6 +492,7 @@ table{
   width: 100%;
 
  th{
+   text-align: center;
    border-style: none;
    font-size: 12px;
    padding: 10px;
@@ -502,6 +503,7 @@ table{
  }
 
   td{
+    text-align: center;
     padding: 10px;
     border-spacing: 1px;
   }
@@ -583,12 +585,11 @@ $cells: 64;
 $divider: sqrt($cells);
 .boton-agregar, .boton-cancelar, .boton-ok, .boton-eliminar, .boton-calendario {
   position: relative;
-  height: 32px;
-  width: 32px;
-  flex: 0 0 56px;
+  height: 35px;
+  width: 35px;
+  flex: 0 0 35px;
   display: inline-block;
   padding: 0;
-  margin: 4px;
   border: 0;
   border-radius: 100%;
   overflow: hidden;
@@ -644,6 +645,7 @@ $divider: sqrt($cells);
 .mv-col{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   //padding: 10px;
   @media (max-width: 360px) {
     flex-direction: column;
@@ -745,12 +747,14 @@ input.buscador{
 
 .foto{
   text-align: center;
-  max-width: 102px;
+  max-width: 142px;
+  margin: 5px;
 }
 .wrapper{
 
   width:100%;
   height:100%;
+  margin-right: 4px;
   display:flex;
   //align-items:center;
   //justify-content:center;
@@ -797,26 +801,33 @@ input.buscador{
   display: none;
 }
 
-.error-input{
-    background: #fff url("http://www.wallplayer.tv/images/wallplayer_en/icon_error_white.gif") no-repeat 97% center;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="time"],
+textarea {
+  &.error-input{
+    //background: #fff url("http://www.wallplayer.tv/images/wallplayer_en/icon_error_white.gif") no-repeat 97% center;
     border-color: red;
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 10px rgba(255,0,0,0.2);
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-name: shake;
-  -moz-animation-name: shake;
-  -o-animation-name: shake;
-  animation-name: shake;
-
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+    -o-animation-name: shake;
+    animation-name: shake;
   }
+}
+
 
 
   @-webkit-keyframes shake {
@@ -851,9 +862,9 @@ input.buscador{
 .ac-mensaje-custom-show{
   position: fixed;
   height: 50px;
-  width: 300px;
+  width: 420px;
   top:50%;
-  left: calc(50% - 150px);
+  left: calc(50% - 210px);
   vertical-align: middle;
 
   i {
@@ -870,6 +881,18 @@ input.buscador{
         cursor: pointer;
 
       }
+    }
+    &.ico-info{
+      color: #447EAF;
+    }
+    &.ico-warn{
+      color: #96722E;
+    }
+    &.ico-success{
+      color: #597151;
+    }
+    &.ico-error{
+      color: #597151;
     }
   }
 }
@@ -889,6 +912,7 @@ $success-text: #597151;
   //text-align: center;
   //font-weight: bold;
   line-height: 26px;
+  z-index: 1;
   //width: 300px;
   //height: 60px;
   //background-image: url('http://i.imgur.com/GnyDvKN.png');
@@ -958,8 +982,7 @@ $success-text: #597151;
 button:focus { outline-style: none!important; }
 
 .row-warning{
-  background-color: yellow;
-  color:black;
+  color: gold;
 }
 
 //*******************************************************************************
@@ -1008,6 +1031,18 @@ button:focus { outline-style: none!important; }
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.menu-icon-mobile{
+  width: 125px;
+  height: 140px;
+  margin: 10px auto;
+  position: relative;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.80));
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
 }
 
 .login-panel-form .botonera{
@@ -1116,7 +1151,8 @@ button:focus { outline-style: none!important; }
 }
 
 .menu-mobile-panel {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Roboto", 'sans-serif';
+  font-size: 14px;
   width: 100%;
   background: rgb(164,169,181); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(164,169,181,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6-15 */
@@ -1127,11 +1163,11 @@ button:focus { outline-style: none!important; }
   flex-direction: column;
   position: fixed;
   bottom: 0px;
-  top: 50px;
+  top: 75px;
   z-index: 500;
   height: 100%;
-  text-align: center;
-  padding-top: 24px;
+  text-align: left;
+  padding-top: 50px;
   opacity: 0;
   -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation: fadeIn ease-in 1;
@@ -1147,17 +1183,27 @@ button:focus { outline-style: none!important; }
   }
 
   .menu-desktop-btn {
-    margin-top: 15px;
-    margin-left: 15px;
-    font-family: 'Droid Serif', serif;
-    font-weight: bold;
+    text-align: center;
+    //font-family: 'Droid Serif', serif;
+    font-weight: Bold;
     line-height: 16px;
     font-size: 18px;
-    padding: 5px;
-    font-variant: all-petite-caps;
+    padding: 15px;
+    background-color: #293333;
     color: white;
+    text-transform: uppercase;
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: .2s;
+    -moz-animation-duration: .2s;
+    animation-duration: .2s;
+
+
     @media (max-width: 800px) {
-      font-size: 24px;
+      font-size: 20px;
     }
 
   }
@@ -1171,6 +1217,21 @@ button:focus { outline-style: none!important; }
   @media (min-width: 800px) {
     visibility: collapse;
     display: none;
+  }
+}
+
+
+
+
+.sub-menu-mobile {
+  margin-top: 10px;
+  //margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  a{
+    font-size: 16px;
+    color: white;
+    margin: 10px 25px;
   }
 }
 
@@ -1423,7 +1484,6 @@ button:focus { outline-style: none!important; }
         font-size: 12px;
         opacity: 0;
         //border-right: 0.1px solid white;
-
         -webkit-animation: fadeIn ease-in-out 2; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
         -moz-animation: fadeIn ease-in-out 2;
         animation: fadeIn ease-in-out 2;
@@ -1433,6 +1493,9 @@ button:focus { outline-style: none!important; }
         -moz-animation-duration: 2s;
         animation-duration: 2s;
       }
+
+
+
 
       .menu-desktop-btn-selected {
         color: bolder;
@@ -1455,6 +1518,10 @@ button:focus { outline-style: none!important; }
   }
 
 }
+
+
+
+
 //************************************************************************************
 .login {
   font-family: 'Merriweather', serif;
@@ -1468,6 +1535,7 @@ button:focus { outline-style: none!important; }
   z-index: 1000;
 
 }
+
 
 //************************************************************************************
 .form-container{
@@ -1492,12 +1560,28 @@ button:focus { outline-style: none!important; }
 }
 .form-open{
   display: inline;
-  width: 474px;
+  width: 484px;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+
+.detalle-container{
+  h3{
+    color: #79996D;
+    margin-bottom: 2px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .nombre-producto-form{
+  margin-top: 3px;
+  margin-bottom: 18px;
+  font-size: 20px;
+  }
 }
 
 
@@ -1726,4 +1810,37 @@ ul.enlarge li:hover:nth-child(3) span{
 /**IE Hacks - see http://css3pie.com/ for more info on how to use CS3Pie and to download the latest version**/
 ul.enlarge img, ul.enlarge span{
   behavior: url(pie/PIE.htc);
+}
+
+.mv-group{
+  display: flex;
+  @media (max-width: 360px) {
+    flex-direction: column;
+  }
+}
+
+.loader-img2{
+  width: 20%px;
+  margin: 10px auto;
+
+}
+
+
+.menu-mobile-btn-contenedor{
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  vertical-align: middle;
+}
+
+.contenedor-logo-back{
+  text-align: center;
+  padding-top: 150px;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-img-2{
+  width: 200px;
+  left: calc(50% - 100px);
 }

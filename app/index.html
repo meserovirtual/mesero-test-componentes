@@ -575,13 +575,40 @@
   </div>
 
   <div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/controles">Controles</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/proveedores">ABM Clientes</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/proveedores">ABM Proveedores</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/usuarios">ABM Empleados</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/productos">ABM Productos</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/sucursales">ABM Sucursales</a>
-    <a ng-click="appCtrl.menu_mobile_open=false;" class="menu-desktop-btn ac-ripple" href="#!/settings/categorias">ABM Categorias</a>
+    <div class="menu-desktop-btn ac-ripple" >Platos</div>
+    <img src="images/logo1.svg" class="menu-icon-mobile" ng-click="appCtrl.menu_mobile_open=false;appCtrl.goToPagina('working');">
+    <div class="menu-desktop-btn ac-ripple" >Caja</div>
+    <img src="images/logo2.svg" class="menu-icon-mobile" ng-click="appCtrl.menu_mobile_open=false;appCtrl.goToPagina('working');">
+    <div class="menu-desktop-btn ac-ripple" >Reportes</div>
+    <img src="images/logo4.svg" class="menu-icon-mobile" ng-click="appCtrl.menu_mobile_open=false;appCtrl.goToPagina('working');">
+    <div class="menu-desktop-btn ac-ripple" >Carrito</div>
+    <img src="images/logo3.svg" class="menu-icon-mobile" ng-click="appCtrl.menu_mobile_open=false;appCtrl.goToPagina('working');">
+
+    <div ng-click="appCtrl.sub_menu_mobile_open=!appCtrl.sub_menu_mobile_open;appCtrl.sub_menu='settings'" class="menu-desktop-btn ac-ripple" >
+      Configuración
+      <div ng-if="appCtrl.sub_menu_mobile_open==true && appCtrl.sub_menu =='settings'" class="sub-menu-mobile">
+        <a href="#!/settings/controles" ng-click="appCtrl.sub_menu = 'controles';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'controles'}">Controles</a>
+        <a href="#!/settings/clientes" ng-click="appCtrl.sub_menu = 'clientes';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'clientes'}">Clientes</a>
+        <a href="#!/settings/proveedores" ng-click="appCtrl.sub_menu = 'proveedores';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'proveedores'}">Proveedores</a>
+        <a href="#!/settings/usuarios" ng-click="appCtrl.sub_menu = 'usuarios';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'usuarios'}">Usuarios</a>
+        <a href="#!/settings/productos" ng-click="appCtrl.sub_menu = 'productos';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'productos'}">Productos</a>
+        <a href="#!/settings/sucursales" ng-click="appCtrl.sub_menu = 'sucursales';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'sucursales'}">Sucursales</a>
+        <a href="#!/settings/categorias" ng-click="appCtrl.sub_menu = 'categorias';appCtrl.menu_mobile_open=false;"
+           ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'categorias'}">Categorias</a>
+      </div>
+    </div>
+    <img src="images/logo5.svg" class="menu-icon-mobile">
+    <div class="menu-desktop-btn ac-ripple" >Pago</div>
+    <img src="images/logo6.svg" class="menu-icon-mobile" ng-click="appCtrl.menu_mobile_open=false;appCtrl.goToPagina('working');">
+    <div class="menu-desktop-btn ac-ripple" >Cocina</div>
+    <img src="images/logo7.svg" class="menu-icon-mobile" ng-click="appCtrl.menu_mobile_open=false;appCtrl.goToPagina('working');">
+
   </div>
 
   <div ng-view style="margin: 130px 25px 0 25px;"></div>

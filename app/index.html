@@ -411,12 +411,15 @@
                 'bower_components/mv-angular-autocomplete/ac-autocomplete.js',
                 'bower_components/mv-angular-usuarios/ac-usuarios.js',
                 'bower_components/mv-angular-usuarios/ac-usuarios-administracion.js',
+                'bower_components/mv-angular-usuarios/ac-clientes-administracion.js',
+                'bower_components/mv-angular-usuarios/ac-proveedores-administracion.js',
                 'bower_components/mv-angular-sucursales/ac-sucursales.js',
                 'bower_components/mv-angular-sucursales/ac-sucursales-administracion.js',
                 'bower_components/mv-angular-uploads/ac-uploads.js',
                 'bower_components/mv-angular-productos/ac-productos.js',
                 'bower_components/mv-angular-productos/ac-productos-administracion.js',
                 'bower_components/mv-angular-productos/ac-categorias-administracion.js',
+                'bower_components/mv-angular-productos/ac-productotipo-administracion.js',
                 'includes/LangTables.js',
               ], 'segundo');
 
@@ -450,7 +453,7 @@
 <body ng-controller="AppCtrl as appCtrl">
   <div ng-if="!appCtrl.hideLoader" id="ac-loader">
     <img src="images/logo_loader.png" alt="" class="loader-img" >
-    <span id="loader-loading">Loading...</span>
+    <span id="loader-loading" style="margin-top: 20px">Loading...</span>
     <div id="border-rad">
       <div id="loader-container">
         <div id="loader-zero">
@@ -563,6 +566,8 @@
              ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'proveedores'}">Proveedores</a>
           <a href="#!/settings/usuarios" ng-click="appCtrl.sub_menu = 'usuarios'"
              ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'usuarios'}">Usuarios</a>
+          <a href="#!/settings/productostipo" ng-click="appCtrl.sub_menu = 'productostipo'"
+             ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'productostipo'}">Tipos de Productos</a>
           <a href="#!/settings/productos" ng-click="appCtrl.sub_menu = 'productos'"
              ng-class="{'sub-menu-selected':appCtrl.sub_menu == 'productos'}">Productos</a>
           <a href="#!/settings/sucursales" ng-click="appCtrl.sub_menu = 'sucursales'"
@@ -611,7 +616,7 @@
 
   </div>
 
-  <div ng-view style="margin: 130px 25px 0 25px;"></div>
+  <div ng-view class="view-container"></div>
 
 </body>
 </html>

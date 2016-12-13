@@ -131,6 +131,11 @@ class Main
             'createProducto' => -1,
             'updateProducto' => -1
         ),
+        'Productos' => array('getProductosTipos' => -1,
+            'createProductoTipo' => -1,
+            'updateProductoTipo' => -1,
+            'removeProductoTipo' => -1
+        ),
         'Sucursales' => array('get' => -1,
             'create' => -1,
             'update' => -1
@@ -160,8 +165,8 @@ class Main
             echo 'Caught exception: ', $e->getMessage(), "\n";
         }
         if (!isset($this->db)) {
-            //$this->db = get('mv-local');
-            $this->db = get('mv-test');
+            $this->db = get('mv-local');
+            //$this->db = get('mv-test');
         }
     }
 }

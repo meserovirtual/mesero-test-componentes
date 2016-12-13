@@ -1,5 +1,5 @@
 <div ng-controller="ControlesCtrl as view1Ctrl" class="mv-group">
-    <div class="mv-col-6">
+    <div class="mv-col-6 mv-col-sm-12">
         <h1>Botones</h1>
 
         <h3>Botones Agregar, Guardar, Cancelar, Borrar</h3>
@@ -122,7 +122,7 @@
         </section>
     </div>
 
-    <div class="mv-col-6">
+    <div class="mv-col-6 mv-col-sm-12">
         <h1>Listas</h1>
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
@@ -216,8 +216,11 @@
         <h1>Buscador</h1>
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="">
-            <div class="input">
-                <input type="text" class="buscador" ng-model="view1Ctrl.filtro" placeholder="Buscar Sucursal">
+            <div class="buscador-container">
+                <div class="input">
+                    <input type="text" class="buscador" ng-model="view1Ctrl.filtro"
+                           placeholder="Buscar Sucursal" style="width: 100%">
+                </div>
             </div>
             <table>
                 <thead>

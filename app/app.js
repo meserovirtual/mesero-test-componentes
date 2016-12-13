@@ -11,6 +11,8 @@
       'acAutocomplete',
       'acUsuarios',
       'acUsuariosAdministracion',
+      'acClientesAdministracion',
+      'acProveedoresAdministracion',
       'acSucursales',
       'acSucursalesAdministracion',
       'LangTables',
@@ -18,6 +20,7 @@
       'acProductos',
       'acProductosAdministracion',
       'acCategoriasAdministracion',
+      'acProductoTipoAdministracion',
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 
@@ -103,6 +106,18 @@
               loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                   // you can lazy load files for an existing module
                   return $ocLazyLoad.load('categorias/categorias.js');
+              }]
+          }
+        });
+
+        $routeProvider.when('/settings/productostipo', {
+          templateUrl: 'productostipo/productostipo.html',
+          controller: 'ProductosTipoCtrl',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+              loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                  // you can lazy load files for an existing module
+                  return $ocLazyLoad.load('productostipo/productostipo.js');
               }]
           }
         });
